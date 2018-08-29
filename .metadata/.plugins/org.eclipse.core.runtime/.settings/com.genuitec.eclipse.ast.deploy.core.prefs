@@ -1,0 +1,13 @@
+eclipse.preferences.version=1
+tomcat7Server.mock.IEARProjectName=
+tomcat7Server.mock.altContextRoot=
+tomcat7Server.mock.contextRoot=/mock
+tomcat7Server.mock.deployIsOverProject=false
+tomcat7Server.mock.deploymentPath=C\:\\server\\webapps\\mock
+tomcat7Server.mock.isDeployed=true
+tomcat7Server.mock.isExploded=true
+tomcat7Server.mock.isUptoDate=true
+tomcat7Server.mock.noFileCopy=false
+tomcat7Server.mock.shouldBackup=false
+tomcat7Server.mock.shouldOverwrite=false
+tomcat7Server.mock.type=WebDeployment
