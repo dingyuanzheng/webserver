@@ -3,6 +3,7 @@ org.eclipse.jdt.core.classpathVariable.JRE_LIB=E\:/webServer/Common/binary/com.s
 org.eclipse.jdt.core.classpathVariable.JRE_SRC=E\:/webServer/Common/binary/com.sun.java.jdk.win32.x86_64_1.6.0.013/src.zip
 org.eclipse.jdt.core.classpathVariable.JRE_SRCROOT=
 org.eclipse.jdt.core.classpathVariable.MYECLIPSE_LIB_HOME=E\:/webServer/Common/plugins/com.genuitec.eclipse.j2eedt.core_10.5.0.me201207171805/data/libraryset
+org.eclipse.jdt.core.codeComplete.visibilityCheck=enabled
 org.eclipse.jdt.core.compiler.codegen.inlineJsrBytecode=enabled
 org.eclipse.jdt.core.compiler.codegen.targetPlatform=1.6
 org.eclipse.jdt.core.compiler.compliance=1.6

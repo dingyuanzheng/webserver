@@ -12,11 +12,12 @@ import javax.servlet.http.HttpServletResponse;
 
 import upload.bean.FileInfo;
 import utils.Analyze;
+import utils.CommentUtil;
 import utils.StringUtil;
 
 public class GetUploadHandleServlet extends HttpServlet {
 	
-	private String baseUrl = StringUtil.ip + "/aixuexiapp/res/";
+	private String baseUrl = "";
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
@@ -36,8 +37,10 @@ public class GetUploadHandleServlet extends HttpServlet {
         PrintWriter out = resp.getWriter();
         File[] files;
         if(StringUtil.isBlank(folder)) {
+        	baseUrl = StringUtil.ip + "/aixuexiapp/res/";
         	files = StringUtil.getWebRootAiXueXiResAbsolutePath(this , "");
         }else {
+        	baseUrl = StringUtil.ip + "/aixuexiapp/res/" + folder + "/";
         	files = StringUtil.getWebRootAiXueXiResAbsolutePath(this , folder);
         }
 		
@@ -48,14 +51,14 @@ public class GetUploadHandleServlet extends HttpServlet {
 					FileInfo fileInfo = new FileInfo();
 					fileInfo.setUrl(baseUrl + files[i].getName());
 					fileInfo.setSize(files[i].length());
-					fileInfo.setCreateTime(files[i].lastModified());
+					fileInfo.setUpdatedAt(files[i].lastModified());
 					fileInfo.setName(files[i].getName());
 					fileInfos.add(fileInfo);
 				}
 			}
 		}
-		out.append(Analyze.analyzeToJson(fileInfos));
-		System.out.println(Analyze.analyzeToJson(fileInfos));
+		out.append(CommentUtil.respSuccessTeacher(fileInfos));
+		System.out.println(CommentUtil.respSuccessTeacher(fileInfos));
 		out.flush();
 		out.close();
 	}

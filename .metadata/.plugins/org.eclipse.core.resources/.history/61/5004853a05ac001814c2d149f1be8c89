@@ -1,0 +1,77 @@
+package upload.bean;
+
+import java.io.Serializable;
+
+public class FileInfo implements Serializable{
+	
+	private String url;
+	private long size;
+	private String name;
+	private long updatedAt;
+	
+	
+	private String from;
+	
+	
+
+	public long getUpdatedAt() {
+		return updatedAt;
+	}
+
+
+	public void setUpdatedAt(long updatedAt) {
+		this.updatedAt = updatedAt;
+	}
+
+
+	public String getFrom() {
+		return from;
+	}
+
+
+	public void setFrom(String from) {
+		this.from = from;
+	}
+
+
+	public long getCreateTime() {
+		return updatedAt;
+	}
+
+
+	public void setCreateTime(long createTime) {
+		this.updatedAt = createTime;
+	}
+
+
+	public String getName() {
+		return name;
+	}
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+	public String getUrl() {
+		return url;
+	}
+
+
+	public void setUrl(String url) {
+		this.url = url;
+	}
+
+
+	public long getSize() {
+		return size;
+	}
+
+
+	public void setSize(long size) {
+		this.size = size;
+	}
+	
+	
+}

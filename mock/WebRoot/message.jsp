@@ -18,6 +18,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body align="center">
-  		${message}
+  		<h1>${message}</h1>
   </body>
 </html>

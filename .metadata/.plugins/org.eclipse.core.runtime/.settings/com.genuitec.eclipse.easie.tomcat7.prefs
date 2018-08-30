@@ -1,3 +1,6 @@
+ENDORSED_DIRS="C\:\\server/common/endorsed"
+JDK_HOME=E\:\\webServer\\Common\\binary\\com.sun.java.jdk.win32.x86_64_1.6.0.013
+LIBRARY_PATH="E\:\\webServer\\Common\\binary\\com.sun.java.jdk.win32.x86_64_1.6.0.013\\bin;C\:\\server\\bin"
 SERVER_ENABLEMENT=true
 TOMCAT_BASE=C\:\\server
 TOMCAT_HOME=C\:\\server

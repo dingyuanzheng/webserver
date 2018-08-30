@@ -1,0 +1,60 @@
+package upload;
+
+import java.io.File;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import upload.bean.FileInfo;
+import utils.Analyze;
+import utils.CommentUtil;
+import utils.StringUtil;
+
+public class FileListHandleServlet extends HttpServlet {
+	
+	private String baseUrl = "";
+	
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+		this.doPost(req, resp);
+	}
+	
+	@Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse resp)
+			throws ServletException, IOException {
+		
+		resp.setContentType("text/html");
+		resp.setHeader("Content-type", "text/html;charset=UTF-8");  
+        PrintWriter out = resp.getWriter();
+        out.append("<html>");
+        out.append("<head>");
+        out.append("<base href='http://10.39.2.203:8080/mock/'>");
+        out.append("<title>爱学习资源服务器</title>");
+        out.append("<meta http-equiv='refresh' content='10'>");
+        out.append("</head>");
+        out.append("<body align='center'>");
+        
+        
+        
+		String[] files = StringUtil.getWebRootAiXueXiAppAbsolutePath(this);
+		if(files != null && files.length > 0) {
+			for(int i = 0 ; i < files.length ; i ++) {
+				out.append("<h1>"+ files[i] +"</h1>");
+				out.append("<h5>下载地址："+ baseUrl + files[i] +"</h5>");
+				out.append("<img align='center' style='height:280px;width:280px' src='qcode.jspx?url="+ files[i] +"' />");
+			}
+		}else {
+			out.append("<h1>打包中，请稍后...</h1>");
+		}
+		out.append("</html>");
+		out.append("</body>");
+		out.flush();
+        out.close();
+	}
+}

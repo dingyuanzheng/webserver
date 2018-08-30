@@ -107,4 +107,24 @@
    <servlet-name>GetUploadHandleServlet</servlet-name>  
    <url-pattern>/getFiles</url-pattern>  
  </servlet-mapping>
+ 
+ 
+ <servlet>  
+   <servlet-name>FileListHandleServlet</servlet-name>  
+   <servlet-class>upload.FileListHandleServlet</servlet-class>  
+ </servlet>  
+ <servlet-mapping>
+   <servlet-name>FileListHandleServlet</servlet-name>  
+   <url-pattern>/fileList</url-pattern>  
+ </servlet-mapping>
+ 
+  
+ <servlet>  
+   <servlet-name>DeleteFileHandleServlet</servlet-name>  
+   <servlet-class>upload.DeleteFileHandleServlet</servlet-class>  
+ </servlet>  
+ <servlet-mapping>
+   <servlet-name>DeleteFileHandleServlet</servlet-name>  
+   <url-pattern>/deleteFile</url-pattern>  
+ </servlet-mapping>
 </web-app>

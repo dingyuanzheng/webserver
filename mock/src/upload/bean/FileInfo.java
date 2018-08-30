@@ -7,21 +7,30 @@ public class FileInfo implements Serializable{
 	private String url;
 	private long size;
 	private String name;
-	private long createTime;
-	
-	
-	
+	private long updatedAt;
+	private String group;
 
-	public long getCreateTime() {
-		return createTime;
+	
+	
+	public String getGroup() {
+		return group;
 	}
 
 
-	public void setCreateTime(long createTime) {
-		this.createTime = createTime;
+	public void setGroup(String group) {
+		this.group = group;
 	}
 
 
+	public long getUpdatedAt() {
+		return updatedAt;
+	}
+
+
+	public void setUpdatedAt(long updatedAt) {
+		this.updatedAt = updatedAt;
+	}
+	
 	public String getName() {
 		return name;
 	}
