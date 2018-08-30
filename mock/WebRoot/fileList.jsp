@@ -75,7 +75,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				     <td class="group"><%=fileList.get(i).getGroup()%></td>
 				     <td class="time"><%=DateUtils.dateFormat(new Date(fileList.get(i).getUpdatedAt()), DateUtils.DATE_TIME_PATTERN)%>  </td>
 				     <td class="size"><%=fileList.get(i).getSize()%>KB</td>
-				     <td class="opert"><a href="<%="./deleteFile?name=" + fileList.get(i).getName() + "&group=" + fileList.get(i).getGroup()%>">删除</a></td>
+				     <td class="opert">
+					     <a href="<%="./fileDetail?name=" + fileList.get(i).getName() + "&group=" + fileList.get(i).getGroup()%>">查看详情</a>
+					     <a href="<%="./deleteFile?name=" + fileList.get(i).getName() + "&group=" + fileList.get(i).getGroup()%>">删除</a>
+					 </td>
 				</tr>
 			<%
 			    }

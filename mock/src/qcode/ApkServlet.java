@@ -29,6 +29,7 @@ public class ApkServlet extends HttpServlet {
 			throws ServletException, IOException {
 		resp.setContentType("text/html");
 		resp.setHeader("Content-type", "text/html;charset=UTF-8");  
+		
         PrintWriter out = resp.getWriter();
         out.append("<html>");
         out.append("<head>");
@@ -43,7 +44,7 @@ public class ApkServlet extends HttpServlet {
 			for(int i = 0 ; i < files.length ; i ++) {
 				out.append("<h1>"+ files[i] +"</h1>");
 				out.append("<h5>下载地址："+ baseUrl + files[i] +"</h5>");
-				out.append("<img align='center' style='height:280px;width:280px' src='qcode.jspx?url="+ files[i] +"' />");
+				out.append("<img align='center' style='height:280px;width:280px' src='qcode.jspx?url="+ baseUrl + files[i] +"' />");
 			}
 		}else {
 			out.append("<h1>打包中，请稍后...</h1>");

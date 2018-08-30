@@ -62,5 +62,21 @@ public class StringUtil {
 		File[] listFile = file.listFiles();
 		return listFile;
 	}
+	
+	/**
+	 * 获取webroot下面aixuexiapp/apk下面的文件
+	 * @return WebRoot目录的绝对路径
+	 */
+	public static String[] getWebRootAiXueXiResStrAbsolutePath(HttpServlet httpServlet ,  String group) {
+		String path = "";
+		if(StringUtil.isBlank(group)) {
+			path = httpServlet.getServletContext().getRealPath("/aixuexiapp/res");
+		}else {
+			path = httpServlet.getServletContext().getRealPath("/aixuexiapp/res")  + "\\" + group;
+		}
+		File file = new File(path);
+		String[] listFile = file.list();
+		return listFile;
+	}
 }
 

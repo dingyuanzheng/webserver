@@ -127,4 +127,13 @@
    <servlet-name>DeleteFileHandleServlet</servlet-name>  
    <url-pattern>/deleteFile</url-pattern>  
  </servlet-mapping>
+   
+ <servlet>  
+   <servlet-name>SingleFileInfoServlet</servlet-name>  
+   <servlet-class>upload.SingleFileInfoServlet</servlet-class>  
+ </servlet>  
+ <servlet-mapping>
+   <servlet-name>SingleFileInfoServlet</servlet-name>  
+   <url-pattern>/fileDetail</url-pattern>  
+ </servlet-mapping>
 </web-app>

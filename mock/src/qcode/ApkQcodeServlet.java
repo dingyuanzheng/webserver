@@ -8,10 +8,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import utils.CreateQRCode;
+import utils.StringUtil;
 
 public class ApkQcodeServlet extends HttpServlet {
-	
-	private String baseUrl = "http://10.39.2.203:8080/mock/aixuexiapp/apk/";
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
@@ -28,7 +27,7 @@ public class ApkQcodeServlet extends HttpServlet {
 		resp.setContentType("text/html");
 		resp.setHeader("Content-type", "text/json;charset=UTF-8");
 		String url = req.getParameter("url");
-		String content = baseUrl + url;  
+		String content = url;  
 		CreateQRCode encoder = new CreateQRCode();
         encoder.encoderQRCoder(content, resp);
 	}
