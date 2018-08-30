@@ -1,2 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="utils.CommentUtil"/>
+<fullyQualifiedTypeName name="utils.Analyze"/>
+<fullyQualifiedTypeName name="utils.DateUtils"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="utils.StringUtil"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+</qualifiedTypeNameHistroy>

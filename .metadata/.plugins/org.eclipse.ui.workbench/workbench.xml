@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="16" version="2.0">
+<workbench progressCount="39" version="2.0">
 <workbenchAdvisor/>
-<window height="768" maximized="true" width="1024" x="-1090" y="-1094">
+<window height="768" maximized="true" width="1024" x="258" y="128">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -23,11 +23,14 @@
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="103" y="22"/>
 <coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="107" y="22"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="61" y="22"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="206" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="com.genuitec.eclipse.webdesigner3.editors.jsp" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
@@ -36,16 +39,10 @@
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Analyze.java" partName="Analyze.java" path="E:/makeProject/webproject/mock/src/utils/Analyze.java" title="Analyze.java" tooltip="mock/src/utils/Analyze.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/mock/src/utils/Analyze.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="386" selectionTopPixel="221"/>
-</editor>
 </editors>
 <views>
 <view id="com.genuitec.eclipse.ui.HTMLView" partName="Web Browser"/>
@@ -53,15 +50,12 @@
 <viewState/>
 </view>
 <view id="org.eclipse.jdt.ui.TypeHierarchy" partName="Type Hierarchy"/>
-<view id="org.eclipse.ui.views.PropertySheet" partName="Properties">
-<viewState/>
-</view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Warnings (37 items)"/>
+<category IMemento.internal.id="Errors"/>
 </expanded>
-<columnWidths org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="105" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="350"/>
+<columnWidths org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="105" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="977"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
@@ -103,9 +97,6 @@
 </viewState>
 </view>
 <view id="org.eclipse.ui.views.TaskList" partName="Tasks"/>
-<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
-<viewState/>
-</view>
 </views>
 <perspectives activePart="org.eclipse.ui.console.ConsoleView" activePerspective="com.genuitec.myeclipse.perspective.myeclipseperspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
@@ -203,8 +194,6 @@
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
 <view id="org.eclipse.jdt.ui.PackageExplorer"/>
 <view id="org.eclipse.jdt.ui.TypeHierarchy"/>
-<view id="org.eclipse.ui.views.ContentOutline"/>
-<view id="org.eclipse.ui.views.PropertySheet"/>
 <view id="org.eclipse.ui.views.ProblemView"/>
 <view id="org.eclipse.ui.views.TaskList"/>
 <view id="com.genuitec.eclipse.ui.HTMLView"/>
@@ -227,22 +216,18 @@
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.13771452" ratioLeft="329" ratioRight="2060" relationship="2" relative="cvslocation"/>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@4c97ed28" ratio="0.74968714" ratioLeft="599" ratioRight="200" relationship="2" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-</presentation>
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@a530461" ratio="0.549763" ratioLeft="348" ratioRight="285" relationship="4" relative="org.eclipse.ui.internal.ViewStack@4c97ed28">
-<folder activePageID="org.eclipse.ui.views.PropertySheet" appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.PropertySheet" label="Properties"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-</presentation>
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.PropertySheet" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<info folder="true" part="bottom" ratio="0.60289115" ratioLeft="709" ratioRight="467" relationship="4" relative="org.eclipse.ui.editorss">
+<info folder="true" part="bottom" ratio="0.5584989" ratioLeft="506" ratioRight="400" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
@@ -283,14 +268,7 @@
 </perspective>
 </perspectives>
 <workingSets/>
-<navigationHistory>
-<editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/mock/src/utils/Analyze.java"/>
-</editors>
-<item active="true" historyLabel="Analyze.java" index="0">
-<position info="not_deleted" x="386" y="0"/>
-</item>
-</navigationHistory>
+<navigationHistory/>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
@@ -307,8 +285,50 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Analyze.java" tooltip="mock/src/utils/Analyze.java">
-<persistable path="/mock/src/utils/Analyze.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="StringUtil.java" tooltip="mockserver/src/utils/StringUtil.java">
+<persistable path="/mockserver/src/utils/StringUtil.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FileListHandleServlet.java" tooltip="mockserver/src/upload/FileListHandleServlet.java">
+<persistable path="/mockserver/src/upload/FileListHandleServlet.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GetUploadHandleServlet.java" tooltip="mockserver/src/upload/GetUploadHandleServlet.java">
+<persistable path="/mockserver/src/upload/GetUploadHandleServlet.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DeleteFileHandleServlet.java" tooltip="mockserver/src/upload/DeleteFileHandleServlet.java">
+<persistable path="/mockserver/src/upload/DeleteFileHandleServlet.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="fileList.jsp" tooltip="mockserver/WebRoot/fileList.jsp">
+<persistable path="/mockserver/WebRoot/fileList.jsp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="index.jsp" tooltip="mockserver/WebRoot/index.jsp">
+<persistable path="/mockserver/WebRoot/index.jsp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="upload.jsp" tooltip="mockserver/WebRoot/upload.jsp">
+<persistable path="/mockserver/WebRoot/upload.jsp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="message.jsp" tooltip="mockserver/WebRoot/message.jsp">
+<persistable path="/mockserver/WebRoot/message.jsp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UploadHandleServlet.java" tooltip="mockserver/src/upload/UploadHandleServlet.java">
+<persistable path="/mockserver/src/upload/UploadHandleServlet.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.editor.webapp25" name="web.xml" tooltip="mockserver/WebRoot/WEB-INF/web.xml">
+<persistable path="/mockserver/WebRoot/WEB-INF/web.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CreateQRCode.java" tooltip="mockserver/src/utils/CreateQRCode.java">
+<persistable path="/mockserver/src/utils/CreateQRCode.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ApkQcodeServlet.java" tooltip="mockserver/src/qcode/ApkQcodeServlet.java">
+<persistable path="/mockserver/src/qcode/ApkQcodeServlet.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SingleFileInfoServlet.java" tooltip="mockserver/src/upload/SingleFileInfoServlet.java">
+<persistable path="/mockserver/src/upload/SingleFileInfoServlet.java"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="HttpServletRequest.class" tooltip="javax.servlet.http.HttpServletRequest">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=mockserver/E:\/webServer\/Common\/plugins\/com.genuitec.eclipse.j2eedt.core_10.5.0.me201207171805\/data\/libraryset\/EE_5\/javaee.jar&lt;javax.servlet.http(HttpServletRequest.class"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="HttpServlet.class" tooltip="javax.servlet.http.HttpServlet">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=mockserver/E:\/webServer\/Common\/plugins\/com.genuitec.eclipse.j2eedt.core_10.5.0.me201207171805\/data\/libraryset\/EE_5\/javaee.jar&lt;javax.servlet.http(HttpServlet.class"/>
 </file>
 </mruList>
 </workbench>
