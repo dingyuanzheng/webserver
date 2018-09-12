@@ -31,7 +31,7 @@ public class DeleteFileHandleServlet extends HttpServlet {
 		resp.setHeader("Content-type", "text/json;charset=UTF-8");  
 		request.setCharacterEncoding("UTF-8");
 		
-	    String name = new String(request.getParameter("name").getBytes("iso-8859-1"), "utf-8");
+	    String name = request.getParameter("name");
 	    String group = new String(request.getParameter("group").getBytes("iso-8859-1"), "utf-8");
 		
 		System.out.println("name:" + name + "==group==" + group);

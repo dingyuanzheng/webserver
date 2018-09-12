@@ -33,7 +33,7 @@ public class UploadHandleServlet extends HttpServlet {
 		
 		//得到上传文件的保存目录，将上传的文件存放于/aixuexiapp/res目录下
 		 savePath = this.getServletContext().getRealPath("/aixuexiapp/res");
-		 
+
 		//消息提示
 		 String message = "";
 		 try{
@@ -61,13 +61,13 @@ public class UploadHandleServlet extends HttpServlet {
 	                  
 	                  if(!StringUtil.isBlank(value)) {
 	                	//得到上传文件的保存目录，将上传的文件存放于/aixuexiapp/res目录下
-	             		 savePath = this.getServletContext().getRealPath("/aixuexiapp/res") + "\\" + value;
+	             		 savePath = this.getServletContext().getRealPath("/aixuexiapp/res/") + value+"/";
 	             		 File file = new File(savePath);
 	             		//判断上传文件的保存目录是否存在
 	             		 if (!file.exists() && !file.isDirectory()) {
 	             			 System.out.println(savePath + "目录不存在，需要创建");
 	             			 //创建目录
-	             			 file.mkdir();
+	             			 file.mkdirs();
 	             		 }
 	                  }
 	             } else {
@@ -83,7 +83,7 @@ public class UploadHandleServlet extends HttpServlet {
 	                  filename = filename.substring(filename.lastIndexOf("\\") + 1);
 	                  
 	                  //文件是否存在，然后删除
-	                  File isExistFile = new File(savePath + "\\" + filename);
+	                  File isExistFile = new File(savePath  + filename);
 	                  if(isExistFile.exists() && isExistFile.isFile()) {
 	                	  isExistFile.delete();
 	                	  System.out.println(isExistFile.getAbsolutePath() + "存在");
@@ -94,7 +94,7 @@ public class UploadHandleServlet extends HttpServlet {
 	                  //获取item中的上传文件的输入流
 	                  InputStream in = item.getInputStream();
 	                  //创建一个文件输出流
-	                  FileOutputStream out = new FileOutputStream(savePath + "\\" + filename);
+	                  FileOutputStream out = new FileOutputStream(savePath + filename);
 	                  //创建一个缓冲区
 	                  byte buffer[] = new byte[1024];
 	                  //判断输入流中的数据是否已经读完的标识
