@@ -59,7 +59,7 @@ public class StringUtil {
         if (StringUtil.isBlank(group)) {
             path = httpServlet.getServletContext().getRealPath("/aixuexiapp/res/");
         } else {
-            path = httpServlet.getServletContext().getRealPath("/aixuexiapp/res/") + "\\" + group;
+            path = httpServlet.getServletContext().getRealPath("/aixuexiapp/res/") + group;
         }
         File file = new File(path);
         File[] listFile = file.listFiles();
