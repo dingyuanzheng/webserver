@@ -1,13 +1,14 @@
 package utils;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.Random;
 
 import javax.servlet.http.HttpServlet;
 
 public class StringUtil {
 
-    public final static String ip = "http://10.10.1.93/mockserver";
+    public final static String ip = "http://10.39.3.47:8080/mockserver";
 
 
     public static boolean isBlank(String str) {
@@ -59,7 +60,7 @@ public class StringUtil {
         if (StringUtil.isBlank(group)) {
             path = httpServlet.getServletContext().getRealPath("/aixuexiapp/res/");
         } else {
-            path = httpServlet.getServletContext().getRealPath("/aixuexiapp/res/") + "\\" + group;
+            path = httpServlet.getServletContext().getRealPath("/aixuexiapp/res/") + File.separator + group;
         }
         File file = new File(path);
         File[] listFile = file.listFiles();
@@ -76,11 +77,10 @@ public class StringUtil {
         if (StringUtil.isBlank(group)) {
             path = httpServlet.getServletContext().getRealPath("/aixuexiapp/res");
         } else {
-            path = httpServlet.getServletContext().getRealPath("/aixuexiapp/res") + "\\" + group;
+            path = httpServlet.getServletContext().getRealPath("/aixuexiapp/res") + File.separator + group;
         }
         File file = new File(path);
-        String[] listFile = file.list();
-        return listFile;
+        return file.list();
     }
 }
 

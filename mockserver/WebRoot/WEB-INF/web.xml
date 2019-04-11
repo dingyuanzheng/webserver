@@ -116,4 +116,32 @@
     <servlet-name>SingleFileInfoServlet</servlet-name>
     <url-pattern>/fileDetail</url-pattern>
   </servlet-mapping>
+  
+    <servlet>
+    <servlet-name>GetHomework</servlet-name>
+    <servlet-class>homework.GetHomework</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GetHomework</servlet-name>
+    <url-pattern>/getHomework</url-pattern>
+  </servlet-mapping>
+  
+ <!--   <servlet>
+    <servlet-name>GetHomeworkV2</servlet-name>
+    <servlet-class>homework.GetHomeworkV2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GetHomeworkV2</servlet-name>
+    <url-pattern>/homework/lessonHomework</url-pattern>
+  </servlet-mapping>
+   -->
+   <servlet>
+    <servlet-name>GetHomeworkV3</servlet-name>
+    <servlet-class>homework.GetHomeworkV3</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>GetHomeworkV3</servlet-name>
+    <url-pattern>/homework/lessonHomework</url-pattern>
+  </servlet-mapping>
 </web-app>

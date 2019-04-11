@@ -1,5 +1,6 @@
 package upload;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -8,7 +9,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import utils.CreateQRCode;
 import utils.StringUtil;
 
 public class SingleFileInfoServlet extends HttpServlet {
@@ -29,8 +29,9 @@ public class SingleFileInfoServlet extends HttpServlet {
 			throws ServletException, IOException {
 		resp.setContentType("text/html");
 		resp.setHeader("Content-type", "text/html;charset=UTF-8");  
-		
 		req.setCharacterEncoding("UTF-8");
+		
+		
 	    String name = new String(req.getParameter("name").getBytes("iso-8859-1"), "utf-8");
 	    String group = new String(req.getParameter("group").getBytes("iso-8859-1"), "utf-8");
 		
@@ -60,6 +61,7 @@ public class SingleFileInfoServlet extends HttpServlet {
 		
 		if(files != null && files.length > 0) {
 			for(int i = 0 ; i < files.length ; i ++) {
+				System.out.println(files[i] + "文件名字");
 				out.append("<h1>"+ files[i] +"</h1>");
 				out.append("<h5>下载地址："+ baseUrl + files[i] +"</h5>");
 				out.append("<img align='center' style='height:280px;width:280px' src= '" +  StringUtil.ip + "/qcode.jspx?url="+ baseUrl + files[i] +"' />");

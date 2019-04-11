@@ -61,7 +61,7 @@ public class UploadHandleServlet extends HttpServlet {
 	                  
 	                  if(!StringUtil.isBlank(value)) {
 	                	//得到上传文件的保存目录，将上传的文件存放于/aixuexiapp/res目录下
-	             		 savePath = this.getServletContext().getRealPath("/aixuexiapp/res") + "\\" + value;
+	             		 savePath = this.getServletContext().getRealPath("/aixuexiapp/res") + File.separator + value;
 	             		 File file = new File(savePath);
 	             		//判断上传文件的保存目录是否存在
 	             		 if (!file.exists() && !file.isDirectory()) {
@@ -80,10 +80,10 @@ public class UploadHandleServlet extends HttpServlet {
 	                  }
 	                  //注意：不同的浏览器提交的文件名是不一样的，有些浏览器提交上来的文件名是带有路径的，如：  c:\a\b\1.txt，而有些只是单纯的文件名，如：1.txt
 	                  //处理获取到的上传文件的文件名的路径部分，只保留文件名部分
-	                  filename = filename.substring(filename.lastIndexOf("\\") + 1);
+	                  filename = filename.substring(filename.lastIndexOf(File.separator) + 1);
 	                  
 	                  //文件是否存在，然后删除
-	                  File isExistFile = new File(savePath + "\\" + filename);
+	                  File isExistFile = new File(savePath + File.separator + filename);
 	                  if(isExistFile.exists() && isExistFile.isFile()) {
 	                	  isExistFile.delete();
 	                	  System.out.println(isExistFile.getAbsolutePath() + "存在");
@@ -94,7 +94,7 @@ public class UploadHandleServlet extends HttpServlet {
 	                  //获取item中的上传文件的输入流
 	                  InputStream in = item.getInputStream();
 	                  //创建一个文件输出流
-	                  FileOutputStream out = new FileOutputStream(savePath + "\\" + filename);
+	                  FileOutputStream out = new FileOutputStream(savePath + File.separator + filename);
 	                  //创建一个缓冲区
 	                  byte buffer[] = new byte[1024];
 	                  //判断输入流中的数据是否已经读完的标识

@@ -1,0 +1,393 @@
+{
+    "status": 1,
+    "errorCode": null,
+    "message": null,
+    "data": {
+        "homeworkId": 413418,
+        "questionsCount": 12,
+        "questions": [
+        {
+                "answerParsing": [
+                    {
+                        "option": "A",
+                        "contentHtml": "<div class=\"axx_piece\"><p style=\"text-align:justify;margin-left:0em;\"><span lang=\"zh-CN\">若</span><span>\\[a=b\\]</span><span lang=\"zh-CN\">，则</span><span>\\[a+b=2b\\]</span></p></div>",
+                        "contentText": "若，则"
+                    },
+                    {
+                        "option": "B",
+                        "contentHtml": "<div class=\"axx_piece\"><p style=\"text-align:justify;margin-left:0em;\"><span lang=\"zh-CN\">若</span><span>\\[2x-4=0\\]</span><span lang=\"zh-CN\">，则</span><span>\\[2x-2=0\\]</span></p></div>",
+                        "contentText": "若，则"
+                    },
+                    {
+                        "option": "C",
+                        "contentHtml": "<div class=\"axx_piece\"><p style=\"text-align:justify;margin-left:0em;\"><span lang=\"zh-CN\">若</span><span>\\[2a=b\\]</span><span lang=\"zh-CN\">，</span><span>\\[b=4c\\]</span><span lang=\"zh-CN\">，则</span><span>\\[a=\\frac{1}{2}c\\]</span></p></div>",
+                        "contentText": "若，，则"
+                    },
+                    {
+                        "option": "D",
+                        "contentHtml": "<div class=\"axx_piece\"><p style=\"text-align:justify;margin-left:0em;\"><span lang=\"zh-CN\">若</span><span>\\[a=b\\]</span><span lang=\"zh-CN\">，则</span><span>\\[5a+5=5b-5\\]</span></p></div>",
+                        "contentText": "若，则"
+                    }
+                ],
+                "myAnswer": [
+                    
+                ],
+                "haveAnswer": 1,
+                "contentHtml": "<div class=\"axx_piece\"><p style=\"text-align:justify;margin-left:0em;\"><span lang=\"zh-CN\">在等式变形的过程中，下列选项正确的是（&nbsp;&nbsp;&nbsp;&nbsp;）</span></p></div>",
+                "contentText": "在等式变形的过程中，下列选项正确的是（    ）",
+                "questionType": 1,
+                "questionsIndex": 1,
+                "topicId": 1914463,
+                "topicType": 1,
+                "sort": null,
+                "childQuestions": null,
+                "answerSize": 1,
+                "staticUrl": "https://q-p-tiku.aixuexi.com/bbdbc868-ebf9-4456-9ec6-4779840e0ffa.json?e=1541578976&token=WR5JtPxdsdYOgladSBDXZl3idmqjBzqkX5E-UDfG:q6P0fukEjHvG7N1dpq6p6OQs2nA=",
+                "showTopic": 0,
+                "showIndex": 3,
+                "originalTopic": null
+            },
+            {
+                "answerParsing": [
+                    {
+                        "option": "A",
+                        "contentHtml": "<div class=\"axx_piece\"><p style=\"text-align:justify;margin-left:0em;\"><span lang=\"zh-CN\">①</span><span lang=\"zh-CN\">②</span><span lang=\"zh-CN\">③</span></p></div>",
+                        "contentText": "①②③"
+                    },
+                    {
+                        "option": "B",
+                        "contentHtml": "<div class=\"axx_piece\"><p style=\"text-align:justify;margin-left:0em;\"><span lang=\"zh-CN\">③</span><span lang=\"zh-CN\">④</span><span lang=\"zh-CN\">⑤</span></p></div>",
+                        "contentText": "③④⑤"
+                    },
+                    {
+                        "option": "C",
+                        "contentHtml": "<div class=\"axx_piece\"><p style=\"text-align:justify;margin-left:0em;\"><span lang=\"zh-CN\">①</span><span lang=\"zh-CN\">③</span><span lang=\"zh-CN\">⑤</span></p></div>",
+                        "contentText": "①③⑤"
+                    },
+                    {
+                        "option": "D",
+                        "contentHtml": "<div class=\"axx_piece\"><p style=\"text-align:justify;margin-left:0em;\"><span lang=\"zh-CN\">①②</span><span lang=\"zh-CN\">③</span><span lang=\"zh-CN\">⑤</span></p></div>",
+                        "contentText": "①②③⑤"
+                    }
+                ],
+                "myAnswer": [
+                    
+                ],
+                "haveAnswer": 0,
+                "contentHtml": "<div class=\"axx_piece\"><p style=\"text-align:justify;margin-left:0em;\"><span lang=\"zh-CN\">运用等式性质进行变形，</span><span lang=\"zh-CN\">①</span><span lang=\"zh-CN\">如果</span><span>\\[a=b\\]</span><span lang=\"zh-CN\">，那么</span><span>\\[a+2c=b+2c\\]</span><span lang=\"zh-CN\">；②如果</span><span>\\[4a={{a}^{2}}\\]</span><span lang=\"zh-CN\">，那么</span><span>\\[a=4\\]</span><span lang=\"zh-CN\">；</span><span lang=\"zh-CN\">③</span><span lang=\"zh-CN\">如果</span><span>\\[a=b\\]</span><span lang=\"zh-CN\">，那么</span><span>\\[ac=bc\\]</span><span lang=\"zh-CN\">；</span><span lang=\"zh-CN\">④</span><span lang=\"zh-CN\">如果</span><span>\\[a=b\\]</span><span lang=\"zh-CN\">，那么</span><span>\\[\\frac{a}{c}=\\frac{b}{c}\\]</span><span lang=\"zh-CN\">；</span><span lang=\"zh-CN\">⑤</span><span lang=\"zh-CN\">如果</span><span>\\[a=b\\]</span><span lang=\"zh-CN\">，那么</span><span>\\[\\frac{a}{{{c}^{2}}+1}=\\frac{b}{{{c}^{2}}+1}\\]</span><span lang=\"zh-CN\">．以上变形正确的有（&nbsp;&nbsp;&nbsp;&nbsp;）</span></p></div>",
+                "contentText": "运用等式性质进行变形，①如果，那么；②如果，那么；③如果，那么；④如果，那么；⑤如果，那么．以上变形正确的有（    ）",
+                "questionType": 1,
+                "questionsIndex": 2,
+                "topicId": 1914464,
+                "topicType": 1,
+                "sort": null,
+                "childQuestions": null,
+                "answerSize": 2,
+                "staticUrl": "https://q-p-tiku.aixuexi.com/7726567a-26da-4d02-b8e1-70956153c802.json?e=1541578976&token=WR5JtPxdsdYOgladSBDXZl3idmqjBzqkX5E-UDfG:He5HqnU_140N91M1YubkHpxI2f0=",
+                "showTopic": 0,
+                "showIndex": 2,
+                "originalTopic": null
+            },
+            {
+                "answerParsing": [
+                    {
+                        "option": "A",
+                        "contentHtml": "<div class=\"axx_piece\"><p style=\"text-align:justify;margin-left:0em;\"><span lang=\"zh-CN\">①</span><span lang=\"zh-CN\">②</span><span lang=\"zh-CN\">③</span></p></div>",
+                        "contentText": "①②③"
+                    },
+                    {
+                        "option": "B",
+                        "contentHtml": "<div class=\"axx_piece\"><p style=\"text-align:justify;margin-left:0em;\"><span lang=\"zh-CN\">③</span><span lang=\"zh-CN\">④</span><span lang=\"zh-CN\">⑤</span></p></div>",
+                        "contentText": "③④⑤"
+                    },
+                    {
+                        "option": "C",
+                        "contentHtml": "<div class=\"axx_piece\"><p style=\"text-align:justify;margin-left:0em;\"><span lang=\"zh-CN\">①</span><span lang=\"zh-CN\">③</span><span lang=\"zh-CN\">⑤</span></p></div>",
+                        "contentText": "①③⑤"
+                    },
+                    {
+                        "option": "D",
+                        "contentHtml": "<div class=\"axx_piece\"><p style=\"text-align:justify;margin-left:0em;\"><span lang=\"zh-CN\">①②</span><span lang=\"zh-CN\">③</span><span lang=\"zh-CN\">⑤</span></p></div>",
+                        "contentText": "①②③⑤"
+                    }
+                ],
+                "myAnswer": [
+                    
+                ],
+                "haveAnswer": 0,
+                "contentHtml": "<div class=\"axx_piece\"><p style=\"text-align:justify;margin-left:0em;\"><span lang=\"zh-CN\">运用等式性质进行变形，</span><span lang=\"zh-CN\">①</span><span lang=\"zh-CN\">如果</span><span>\\[a=b\\]</span><span lang=\"zh-CN\">，那么</span><span>\\[a+2c=b+2c\\]</span><span lang=\"zh-CN\">；②如果</span><span>\\[4a={{a}^{2}}\\]</span><span lang=\"zh-CN\">，那么</span><span>\\[a=4\\]</span><span lang=\"zh-CN\">；</span><span lang=\"zh-CN\">③</span><span lang=\"zh-CN\">如果</span><span>\\[a=b\\]</span><span lang=\"zh-CN\">，那么</span><span>\\[ac=bc\\]</span><span lang=\"zh-CN\">；</span><span lang=\"zh-CN\">④</span><span lang=\"zh-CN\">如果</span><span>\\[a=b\\]</span><span lang=\"zh-CN\">，那么</span><span>\\[\\frac{a}{c}=\\frac{b}{c}\\]</span><span lang=\"zh-CN\">；</span><span lang=\"zh-CN\">⑤</span><span lang=\"zh-CN\">如果</span><span>\\[a=b\\]</span><span lang=\"zh-CN\">，那么</span><span>\\[\\frac{a}{{{c}^{2}}+1}=\\frac{b}{{{c}^{2}}+1}\\]</span><span lang=\"zh-CN\">．以上变形正确的有（&nbsp;&nbsp;&nbsp;&nbsp;）</span></p></div>",
+                "contentText": "运用等式性质进行变形，①如果，那么；②如果，那么；③如果，那么；④如果，那么；⑤如果，那么．以上变形正确的有（    ）",
+                "questionType": 1,
+                "questionsIndex": 2,
+                "topicId": 1914464,
+                "topicType": 1,
+                "sort": null,
+                "childQuestions": null,
+                "answerSize": 1,
+                "staticUrl": "https://q-p-tiku.aixuexi.com/7726567a-26da-4d02-b8e1-70956153c802.json?e=1541578976&token=WR5JtPxdsdYOgladSBDXZl3idmqjBzqkX5E-UDfG:He5HqnU_140N91M1YubkHpxI2f0=",
+                "showTopic": 0,
+                "showIndex": 1,
+                "originalTopic": null
+            },
+            {
+                "answerParsing": [
+                    {
+                        "option": "A",
+                        "contentHtml": "<div class=\"axx_piece\"><p style=\"text-align:justify;margin-left:0em;\"><span lang=\"zh-CN\">方程是等式，等式也一定是方程</span></p></div>",
+                        "contentText": "方程是等式，等式也一定是方程"
+                    },
+                    {
+                        "option": "B",
+                        "contentHtml": "<div class=\"axx_piece\"><p style=\"text-align:justify;margin-left:0em;\"><span lang=\"zh-CN\">由</span><span>$\\frac{1}{c}x=\\frac{1}{c}y$</span><span lang=\"zh-CN\">这个条件不能得到</span><span>$x=y$</span><span lang=\"zh-CN\">一定成立的结论</span></p></div>",
+                        "contentText": "由这个条件不能得到一定成立的结论"
+                    },
+                    {
+                        "option": "C",
+                        "contentHtml": "<div class=\"axx_piece\"><p style=\"text-align:justify;margin-left:0em;\"><span lang=\"zh-CN\">在整数范围内，方程</span><span>$2x=-2$</span><span lang=\"zh-CN\">无解</span></p></div>",
+                        "contentText": "在整数范围内，方程无解"
+                    },
+                    {
+                        "option": "D",
+                        "contentHtml": "<div class=\"axx_piece\"><p style=\"text-align:justify;margin-left:0em;\"><span>$x=0$</span><span lang=\"zh-CN\">是方程</span></p></div>",
+                        "contentText": "是方程"
+                    }
+                ],
+                "myAnswer": [
+                    
+                ],
+                "haveAnswer": 1,
+                "contentHtml": "<div class=\"axx_piece\"><p style=\"text-align:justify;margin-left:0em;\"><span lang=\"zh-CN\">下列句子中，正确的是（&nbsp;&nbsp;&nbsp;）</span></p></div>",
+                "contentText": "下列句子中，正确的是（   ）",
+                "questionType": 1,
+                "questionsIndex": 3,
+                "topicId": 1914465,
+                "topicType": 1,
+                "sort": null,
+                "childQuestions": null,
+                "answerSize": 3,
+                "staticUrl": "https://q-p-tiku.aixuexi.com/bdcd9a08-8df9-454b-99b3-edd109a0da21.json?e=1541578976&token=WR5JtPxdsdYOgladSBDXZl3idmqjBzqkX5E-UDfG:LgfpbQwR-u-_YA0Fim8MhcA1FAU=",
+                "showTopic": 0,
+                "showIndex": 4,
+                "originalTopic": null
+            },
+            {
+                "answerParsing": [
+                    
+                ],
+                "myAnswer": [
+                    
+                ],
+                "haveAnswer": 0,
+                "contentHtml": "<div class=\"axx_piece\"><p style=\"text-align:justify;margin-left:0em;\"><span lang=\"zh-CN\">方程</span><span>\\[2x+5=0\\]</span><span lang=\"zh-CN\">的解为</span><span lang=\"zh-CN\">（&nbsp;&nbsp;&nbsp;&nbsp;）</span></p></div>",
+                "contentText": "方程的解为（    ）",
+                "questionType": 1,
+                "questionsIndex": 4,
+                "topicId": 1914466,
+                "topicType": 2,
+                "sort": null,
+                "childQuestions": null,
+                "answerSize": 4,
+                "staticUrl": "https://q-p-tiku.aixuexi.com/a3bd39dd-3927-4553-aa1e-a45369918627.json?e=1541578976&token=WR5JtPxdsdYOgladSBDXZl3idmqjBzqkX5E-UDfG:4hBnS3qFKCeQsPo4lj-VBc0uvz0=",
+                "showTopic": 0,
+                "showIndex": 5,
+                "originalTopic": null
+            },
+            {
+                "answerParsing": [
+                    
+                ],
+                "myAnswer": [
+                    
+                ],
+                "haveAnswer": 1,
+                "contentHtml": "<div class=\"axx_piece\"><p style=\"text-align:justify;margin-left:0em;\"><span lang=\"zh-CN\">方程</span><span>\\[2x+5=0\\]</span><span lang=\"zh-CN\">的解为</span><span lang=\"zh-CN\">（&nbsp;&nbsp;&nbsp;&nbsp;）</span></p></div>",
+                "contentText": "方程的解为（    ）",
+                "questionType": 1,
+                "questionsIndex": 4,
+                "topicId": 1914466,
+                "topicType": 2,
+                "sort": null,
+                "childQuestions": null,
+                "answerSize": 4,
+                "staticUrl": "https://q-p-tiku.aixuexi.com/a3bd39dd-3927-4553-aa1e-a45369918627.json?e=1541578976&token=WR5JtPxdsdYOgladSBDXZl3idmqjBzqkX5E-UDfG:4hBnS3qFKCeQsPo4lj-VBc0uvz0=",
+                "showTopic": 0,
+                "showIndex": 6,
+                "originalTopic": null
+            },
+            {
+                "answerParsing": [
+                    
+                ],
+                "myAnswer": [
+                    
+                ],
+                "haveAnswer": 1,
+                "contentHtml": "<div class=\"axx_piece\"><p style=\"text-align:justify;margin-left:0em;\"><span lang=\"zh-CN\">方程</span><span>\\[2x+5=0\\]</span><span lang=\"zh-CN\">的解为</span><span lang=\"zh-CN\">（&nbsp;&nbsp;&nbsp;&nbsp;）</span></p></div>",
+                "contentText": "方程的解为（    ）",
+                "questionType": 1,
+                "questionsIndex": 4,
+                "topicId": 1914466,
+                "topicType": 2,
+                "sort": null,
+                "childQuestions": null,
+                "answerSize": 4,
+                "staticUrl": "https://q-p-tiku.aixuexi.com/a3bd39dd-3927-4553-aa1e-a45369918627.json?e=1541578976&token=WR5JtPxdsdYOgladSBDXZl3idmqjBzqkX5E-UDfG:4hBnS3qFKCeQsPo4lj-VBc0uvz0=",
+                "showTopic": 0,
+                "showIndex": 7,
+                "originalTopic": null
+            },
+            {
+                "answerParsing": [
+                    {
+                        "option": "",
+                        "contentHtml": "<div class=\"axx_piece\"><p style=\"text-align:justify;margin-left:0em;\"><span>\\[x=\\frac{5}{2}\\]</span></p></div>",
+                        "contentText": ""
+                    },
+                    {
+                        "option": "",
+                        "contentHtml": "<div class=\"axx_piece\"><p style=\"text-align:justify;margin-left:0em;\"><span>\\[x=-\\frac{5}{2}\\]</span></p></div>",
+                        "contentText": ""
+                    },
+                    {
+                        "option": "",
+                        "contentHtml": "<div class=\"axx_piece\"><p style=\"text-align:justify;margin-left:0em;\"><span>\\[x=\\frac{3}{2}\\]</span></p></div>",
+                        "contentText": ""
+                    },
+                    {
+                        "option": "",
+                        "contentHtml": "<div class=\"axx_piece\"><p style=\"text-align:justify;margin-left:0em;\"><span>\\[x=-\\frac{3}{2}\\]</span></p></div>",
+                        "contentText": ""
+                    }
+                ],
+                "myAnswer": [
+                    
+                ],
+                "haveAnswer": 0,
+                "contentHtml": "<div class=\"axx_piece\"><p style=\"text-align:justify;margin-left:0em;\"><span lang=\"zh-CN\">方程</span><span>\\[2x+5=0\\]</span><span lang=\"zh-CN\">的解为</span><span lang=\"zh-CN\">（&nbsp;&nbsp;&nbsp;&nbsp;）</span></p></div>",
+                "contentText": "方程的解为（    ）",
+                "questionType": 1,
+                "questionsIndex": 4,
+                "topicId": 1914466,
+                "topicType": 3,
+                "sort": null,
+                "childQuestions": null,
+                "answerSize": 4,
+                "staticUrl": "https://q-p-tiku.aixuexi.com/a3bd39dd-3927-4553-aa1e-a45369918627.json?e=1541578976&token=WR5JtPxdsdYOgladSBDXZl3idmqjBzqkX5E-UDfG:4hBnS3qFKCeQsPo4lj-VBc0uvz0=",
+                "showTopic": 0,
+                "showIndex": 8,
+                "originalTopic": null
+            },
+            {
+                "answerParsing": [
+                    {
+                        "option": "",
+                        "contentHtml": "<div class=\"axx_piece\"><p style=\"text-align:justify;margin-left:0em;\"><span>\\[x=\\frac{5}{2}\\]</span></p></div>",
+                        "contentText": ""
+                    },
+                    {
+                        "option": "",
+                        "contentHtml": "<div class=\"axx_piece\"><p style=\"text-align:justify;margin-left:0em;\"><span>\\[x=-\\frac{5}{2}\\]</span></p></div>",
+                        "contentText": ""
+                    },
+                    {
+                        "option": "",
+                        "contentHtml": "<div class=\"axx_piece\"><p style=\"text-align:justify;margin-left:0em;\"><span>\\[x=\\frac{3}{2}\\]</span></p></div>",
+                        "contentText": ""
+                    },
+                    {
+                        "option": "",
+                        "contentHtml": "<div class=\"axx_piece\"><p style=\"text-align:justify;margin-left:0em;\"><span>\\[x=-\\frac{3}{2}\\]</span></p></div>",
+                        "contentText": ""
+                    }
+                ],
+                "myAnswer": [
+                    
+                ],
+                "haveAnswer": 1,
+                "contentHtml": "<div class=\"axx_piece\"><p style=\"text-align:justify;margin-left:0em;\"><span lang=\"zh-CN\">方程</span><span>\\[2x+5=0\\]</span><span lang=\"zh-CN\">的解为</span><span lang=\"zh-CN\">（&nbsp;&nbsp;&nbsp;&nbsp;）</span></p></div>",
+                "contentText": "方程的解为（    ）",
+                "questionType": 1,
+                "questionsIndex": 4,
+                "topicId": 1914466,
+                "topicType": 3,
+                "sort": null,
+                "childQuestions": null,
+                "answerSize": 4,
+                "staticUrl": "https://q-p-tiku.aixuexi.com/a3bd39dd-3927-4553-aa1e-a45369918627.json?e=1541578976&token=WR5JtPxdsdYOgladSBDXZl3idmqjBzqkX5E-UDfG:4hBnS3qFKCeQsPo4lj-VBc0uvz0=",
+                "showTopic": 0,
+                "showIndex": 9,
+                "originalTopic": null
+            },
+            {
+                "answerParsing": [
+                    
+                ],
+                "myAnswer": [
+                    
+                ],
+                "haveAnswer": 0,
+                "contentHtml": "<div class=\"axx_piece\"><p style=\"text-align:justify;margin-left:0em;\"><span lang=\"zh-CN\">解方程</span></p><p style=\"text-align:justify;margin-left:0em;\"><span lang=\"zh-CN\">（1）</span><span>$2x+3-3x=7$</span><span lang=\"zh-CN\">（2）</span><span>$5x-3-7x=-3-x$</span></p><p style=\"text-align:justify;margin-left:0em;\"><span lang=\"zh-CN\">（3）</span><span>$3\\left( x-2 \\right)=6$</span><span lang=\"zh-CN\">（4）</span><span>$\\frac{x}{2}=\\frac{10-x}{3}$</span></p></div>",
+                "contentText": "解方程\r（1）（2）\r（3）（4）",
+                "questionType": 2,
+                "questionsIndex": 10,
+                "topicId": 1914472,
+                "topicType": 4,
+                "sort": null,
+                "childQuestions": null,
+                "answerSize": null,
+                "staticUrl": "https://q-p-tiku.aixuexi.com/d475a931-ece9-432d-9527-09f7efcc1467.json?e=1541578976&token=WR5JtPxdsdYOgladSBDXZl3idmqjBzqkX5E-UDfG:UmLuu8zZRNIpZKL6_r7DZffobaQ=",
+                "showTopic": 0,
+                "showIndex": 10,
+                "originalTopic": null
+            },
+            {
+                "answerParsing": [
+                    
+                ],
+                "myAnswer": [
+                    
+                ],
+                "haveAnswer": 1,
+                "contentHtml": "<div class=\"axx_piece\"><p style=\"text-align:justify;margin-left:0em;\"><span lang=\"zh-CN\">解方程</span></p><p style=\"text-align:justify;margin-left:0em;\"><span lang=\"zh-CN\">（1）</span><span>$2x+3-3x=7$</span><span lang=\"zh-CN\">（2）</span><span>$5x-3-7x=-3-x$</span></p><p style=\"text-align:justify;margin-left:0em;\"><span lang=\"zh-CN\">（3）</span><span>$3\\left( x-2 \\right)=6$</span><span lang=\"zh-CN\">（4）</span><span>$\\frac{x}{2}=\\frac{10-x}{3}$</span></p></div>",
+                "contentText": "解方程\r（1）（2）\r（3）（4）",
+                "questionType": 2,
+                "questionsIndex": 10,
+                "topicId": 1914472,
+                "topicType": 4,
+                "sort": null,
+                "childQuestions": null,
+                "answerSize": null,
+                "staticUrl": "https://q-p-tiku.aixuexi.com/d475a931-ece9-432d-9527-09f7efcc1467.json?e=1541578976&token=WR5JtPxdsdYOgladSBDXZl3idmqjBzqkX5E-UDfG:UmLuu8zZRNIpZKL6_r7DZffobaQ=",
+                "showTopic": 0,
+                "showIndex": 11,
+                "originalTopic": null
+            },
+            {
+                "answerParsing": [
+                    
+                ],
+                "myAnswer": [
+                    
+                ],
+                "haveAnswer": 1,
+                "contentHtml": "<div class=\"axx_piece\"><p style=\"text-align:justify;margin-left:0em;\"><span lang=\"zh-CN\">解方程</span></p><p style=\"text-align:justify;margin-left:0em;\"><span lang=\"zh-CN\">（1）</span><span>$2x+3-3x=7$</span><span lang=\"zh-CN\">（2）</span><span>$5x-3-7x=-3-x$</span></p><p style=\"text-align:justify;margin-left:0em;\"><span lang=\"zh-CN\">（3）</span><span>$3\\left( x-2 \\right)=6$</span><span lang=\"zh-CN\">（4）</span><span>$\\frac{x}{2}=\\frac{10-x}{3}$</span></p></div>",
+                "contentText": "解方程\r（1）（2）\r（3）（4）",
+                "questionType": 2,
+                "questionsIndex": 10,
+                "topicId": 1914472,
+                "topicType": 4,
+                "sort": null,
+                "childQuestions": null,
+                "answerSize": null,
+                "staticUrl": "https://q-p-tiku.aixuexi.com/d475a931-ece9-432d-9527-09f7efcc1467.json?e=1541578976&token=WR5JtPxdsdYOgladSBDXZl3idmqjBzqkX5E-UDfG:UmLuu8zZRNIpZKL6_r7DZffobaQ=",
+                "showTopic": 0,
+                "showIndex": 12,
+                "originalTopic": null
+            }
+        ],
+        "classId": 4617445,
+        "version": "zy18091311273422680002",
+        "time": 1541578376332
+    },
+    "erroCode": null
+}
