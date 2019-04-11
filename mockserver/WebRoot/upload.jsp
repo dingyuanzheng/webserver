@@ -26,6 +26,5 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	    		     <input type="submit" value="提交" , style="width:100px;">
 	     </form>
 	     <br/><br/>
-	     <a href="${pageContext.request.contextPath}/fileList"><font size="45">资源服务器</font></a>
   </body>
 </html>

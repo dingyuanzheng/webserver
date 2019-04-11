@@ -9,7 +9,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>爱学习android客户端下载</title>
+    <title>爱学习</title>
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta http-equiv="expires" content="0">    
@@ -22,11 +22,20 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body align="center">
-     <h1>student_beta_1.9.0.201808091551.apk</h1>
-    <img align="center" style="height:280px;width:280px" src="codebeta.jspx" />
-    <h1>student_monkey_1.9.0.201808091550.apk</h1>
-    <img align="center" style="height:280px;width:280px" src="codemonkey.jspx" />
-    <h1>student_release_1.9.0_201808091552.apk</h1>
-    <img align="center" style="height:280px;width:280px" src="coderelease.jspx" />
+      <a href="${pageContext.request.contextPath}/upload.jsp" target="_Blank"><font size="45">上传文件</font></a>
+      </br>
+      <a href="${pageContext.request.contextPath}/fileList" target="_Blank"><font size="45">资源列表</font></a>
+      </br>
+      <a href="${pageContext.request.contextPath}/bejson.html" target="_Blank"><font size="45">json解析</font></a>
+      </br>
+      <a href="http://jira.dev.aixuexi.com" target="_Blank"><font size="45">jira地址</font></a>&nbsp&nbsp&nbsp&nbsp
+      <a href="http://iwork.gaosiedu.com" target="_Blank"><font size="45">iwork地址</font></a>&nbsp&nbsp&nbsp&nbsp
+      <a href="http://192.168.5.129:10000/html/web/controller/console/console.html" target="_Blank"><font size="45">DOClever地址</font></a>&nbsp&nbsp&nbsp&nbsp
+      <a href="http://gitlab.ops.aixuexi.com" target="_Blank"><font size="45">GITLAB地址</font></a>
+      </br>
+      <a href="https://tinypng.com/" target="_Blank"><font size="45">图片压缩地址</font></a>&nbsp&nbsp&nbsp&nbsp
+      <a href="https://tool.lu/coderunner/" target="_Blank"><font size="45">在线代码运行</font></a>&nbsp&nbsp&nbsp&nbsp
+      <a href="https://tool.lu/hexconvert/" target="_Blank"><font size="45">进制转换</font></a>
+     
   </body>
 </html>
