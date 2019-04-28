@@ -57,8 +57,8 @@ public class GetUploadHandleServlet extends HttpServlet {
 				}
 			}
 		}
-		out.append(CommentUtil.respSuccessTeacher(fileInfos));
-		System.out.println(CommentUtil.respSuccessTeacher(fileInfos));
+		out.append(CommentUtil.respSuccessTeacher(fileInfos , "查询成功"));
+		System.out.println(CommentUtil.respSuccessTeacher(fileInfos , "查询成功"));
 		out.flush();
 		out.close();
 	}

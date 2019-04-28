@@ -42,10 +42,10 @@ public class CommentUtil {
 	 * @param obj
 	 * @return
 	 */
-	public static String respSuccessTeacher(Object obj){
+	public static String respSuccessTeacher(Object obj , String errorMessage){
 		HashMap<Object , Object> linkHashMap = new HashMap<Object , Object>();
 		linkHashMap.put("errorCode", 1);
-		linkHashMap.put("errorMessage", "查询成功");
+		linkHashMap.put("errorMessage", errorMessage);
 		linkHashMap.put("status", 1);
 		linkHashMap.put("body", obj);
 		return Analyze.analyzeToJson(linkHashMap);
