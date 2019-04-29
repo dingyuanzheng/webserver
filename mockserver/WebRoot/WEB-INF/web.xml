@@ -60,9 +60,17 @@
     <servlet-name>SingleFileInfoServlet</servlet-name>
     <url-pattern>/fileDetail</url-pattern>
   </servlet-mapping>
+    <servlet>
+    <servlet-name>SendMailServlet1</servlet-name>
+    <servlet-class>upload.SendMailServlet1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SendMailServlet1</servlet-name>
+    <url-pattern>/sendMail1</url-pattern>
+  </servlet-mapping>
   <servlet>
     <servlet-name>SendMailServlet</servlet-name>
-    <servlet-class>upload.SendMailServlet</servlet-class>
+    <servlet-class>upload.SendMailServlet2</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>SendMailServlet</servlet-name>

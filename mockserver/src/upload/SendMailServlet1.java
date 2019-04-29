@@ -18,7 +18,7 @@ import utils.StringUtil;
 
 import com.google.gson.reflect.TypeToken;
 
-public class SendMailServlet extends HttpServlet {
+public class SendMailServlet1 extends HttpServlet {
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
@@ -38,6 +38,7 @@ public class SendMailServlet extends HttpServlet {
 		final String emailMsg = new String(req.getParameter("emailMsg").getBytes("iso-8859-1"), "utf-8");
 	    String email = new String(req.getParameter("email").getBytes("iso-8859-1"), "utf-8");
 	    
+	    System.out.println("subject" + subject + "==emailMsg==" + "==email==" + email);
 	    
 		//dingyuanzheng@gaosiedu.com,huangshan0@gaosiedu.com
 	    PrintWriter out = resp.getWriter();
