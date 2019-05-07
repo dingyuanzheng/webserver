@@ -11,7 +11,7 @@ import utils.StringUtil;
 
 public class SingleFileInfoServlet extends HttpServlet {
 	
-	private String baseUrl = StringUtil.ip + "/aixuexiapp/res/";
+	private String baseUrl = StringUtil.getIp() + "/aixuexiapp/res/";
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
@@ -38,7 +38,7 @@ public class SingleFileInfoServlet extends HttpServlet {
         PrintWriter out = resp.getWriter();
         out.append("<html>");
         out.append("<head>");
-        out.append("<base href=" + StringUtil.ip + ">");
+        out.append("<base href=" + StringUtil.getIp() + ">");
         out.append("<title>爱学习android客户端下载</title>");
         out.append("<meta http-equiv='refresh' content='10'>");
         out.append("</head>");
@@ -62,7 +62,7 @@ public class SingleFileInfoServlet extends HttpServlet {
 				System.out.println(files[i] + "文件名字");
 				out.append("<h1>"+ files[i] +"</h1>");
 				out.append("<h5>下载地址："+ baseUrl + files[i] +"</h5>");
-				out.append("<img align='center' style='height:280px;width:280px' src= '" +  StringUtil.ip + "/qcode.jspx?url="+ baseUrl + files[i] +"' />");
+				out.append("<img align='center' style='height:280px;width:280px' src= '" +  StringUtil.getIp() + "/qcode.jspx?url="+ baseUrl + files[i] +"' />");
 			}
 		}else {
 			out.append("<h1>暂时没有文件，请返回查看</h1>");

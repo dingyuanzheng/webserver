@@ -13,7 +13,7 @@ import utils.StringUtil;
 
 public class ApkServlet extends HttpServlet {
 	
-	private String baseUrl = StringUtil.ip + "/aixuexiapp/apk/";
+	private String baseUrl = StringUtil.getIp() + "/aixuexiapp/apk/";
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)

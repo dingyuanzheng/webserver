@@ -1,14 +1,13 @@
 package utils;
 
 import java.io.File;
-import java.util.ArrayList;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.util.Random;
 
 import javax.servlet.http.HttpServlet;
 
 public class StringUtil {
-
-    public final static String ip = "http://10.39.3.47:8080/mockserver";
 
 
     public static boolean isBlank(String str) {
@@ -81,6 +80,19 @@ public class StringUtil {
         }
         File file = new File(path);
         return file.list();
+    }
+    
+    /**
+     * 获取ip地址
+     * @return
+     */
+    public static String getIp() {
+    	try {
+			return "http://" + InetAddress.getLocalHost().getHostAddress() + ":8080/mockserver";
+		} catch (UnknownHostException e) {
+			e.printStackTrace();
+		}
+    	return "";
     }
 }
 

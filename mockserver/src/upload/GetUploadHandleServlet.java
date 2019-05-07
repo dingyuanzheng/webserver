@@ -37,10 +37,10 @@ public class GetUploadHandleServlet extends HttpServlet {
         PrintWriter out = resp.getWriter();
         File[] files;
         if(StringUtil.isBlank(folder)) {
-        	baseUrl = StringUtil.ip + "/aixuexiapp/res/";
+        	baseUrl = StringUtil.getIp() + "/aixuexiapp/res/";
         	files = StringUtil.getWebRootAiXueXiResAbsolutePath(this , "");
         }else {
-        	baseUrl = StringUtil.ip + "/aixuexiapp/res/" + folder + "/";
+        	baseUrl = StringUtil.getIp() + "/aixuexiapp/res/" + folder + "/";
         	files = StringUtil.getWebRootAiXueXiResAbsolutePath(this , folder);
         }
 		
