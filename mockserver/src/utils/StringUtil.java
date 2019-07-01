@@ -87,12 +87,7 @@ public class StringUtil {
      * @return
      */
     public static String getIp() {
-    	try {
-			return "http://" + InetAddress.getLocalHost().getHostAddress() + ":8080/mockserver";
-		} catch (UnknownHostException e) {
-			e.printStackTrace();
-		}
-    	return "";
+		return "http://10.39.3.203:8080/mockserver";
     }
 }
 

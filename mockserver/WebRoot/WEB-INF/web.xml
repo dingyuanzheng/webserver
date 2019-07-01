@@ -76,4 +76,13 @@
     <servlet-name>SendMailServlet</servlet-name>
     <url-pattern>/sendMail</url-pattern>
   </servlet-mapping>
+  
+    <servlet>
+    <servlet-name>SendWXServlet</servlet-name>
+    <servlet-class>upload.SendWXServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SendWXServlet</servlet-name>
+    <url-pattern>/sendWxMsg</url-pattern>
+  </servlet-mapping>
 </web-app>
