@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*,upload.bean.FileInfo,utils.DateUtils" pageEncoding="utf-8"%>
+<%@ page import="utils.MathUtils" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -74,9 +75,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				     <td class="name"><%=fileList.get(i).getName()%></td>
 				     <td class="group"><%=fileList.get(i).getGroup()%></td>
 				     <td class="time"><%=DateUtils.dateFormat(new Date(fileList.get(i).getUpdatedAt()), DateUtils.DATE_TIME_PATTERN)%>  </td>
-				     <td class="size"><%=fileList.get(i).getSize()%>KB</td>
+
+				     <td class="size"><%=MathUtils.getScaleNumber(fileList.get(i).getSize(),1024*1024)%> MB</td>
 				     <td class="opert">
-					     <a href="${pageContext.request.contextPath}<%="/fileDetail?name=" + fileList.get(i).getName() + "&group=" + fileList.get(i).getGroup()%>">查看详情</a>
+					     <a href="${pageContext.request.contextPath}<%="/fileDetail?name=" + fileList.get(i).getName() + "&group=" + fileList.get(i).getGroup()+ "&size=" + fileList.get(i).getSize()+ "&updateAt=" + fileList.get(i).getUpdatedAt()%>">查看详情</a>
 					     <a href="${pageContext.request.contextPath}<%="/deleteFile?name=" + fileList.get(i).getName() + "&group=" + fileList.get(i).getGroup()%>">删除</a>
 					 </td>
 				</tr>

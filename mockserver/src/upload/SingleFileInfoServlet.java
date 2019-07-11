@@ -1,12 +1,19 @@
 package upload;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.ParseException;
+import java.util.Date;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import upload.bean.FileInfo;
+import utils.DateUtils;
+import utils.MathUtils;
 import utils.StringUtil;
 
 public class SingleFileInfoServlet extends HttpServlet {
@@ -32,7 +39,9 @@ public class SingleFileInfoServlet extends HttpServlet {
 		
 	    String name = new String(req.getParameter("name").getBytes("iso-8859-1"), "utf-8");
 	    String group = new String(req.getParameter("group").getBytes("iso-8859-1"), "utf-8");
-		
+	    String size = new String(req.getParameter("size").getBytes("iso-8859-1"), "utf-8");
+	    String updateAt = new String(req.getParameter("updateAt").getBytes("iso-8859-1"), "utf-8");
+
 	    
 	    
         PrintWriter out = resp.getWriter();
@@ -62,6 +71,12 @@ public class SingleFileInfoServlet extends HttpServlet {
 				System.out.println(files[i] + "文件名字");
 				out.append("<h1>"+ files[i] +"</h1>");
 				out.append("<h5>下载地址："+ baseUrl + files[i] +"</h5>");
+				out.append("<h5>大小："+ MathUtils.getScaleNumber(Long.valueOf(size),1024*1024) +" MB</h5>");
+				try {
+					out.append("<h5>时间："+ DateUtils.dateFormat(new Date(Long.valueOf(updateAt)), DateUtils.DATE_TIME_PATTERN) +"</h5>");
+				} catch (ParseException e) {
+					e.printStackTrace();
+				}
 				out.append("<img align='center' style='height:280px;width:280px' src= '" +  StringUtil.getIp() + "/qcode.jspx?url="+ baseUrl + files[i] +"' />");
 			}
 		}else {
