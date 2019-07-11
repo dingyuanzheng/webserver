@@ -1,12 +1,6 @@
 package test;
 
-import javax.mail.MessagingException;
-import javax.mail.internet.AddressException;
-
-import com.alibaba.fastjson.JSONObject;
-
-import utils.HttpUtil;
-import utils.MailUtils;
+import utils.SendMsgUtil;
 import utils.StringUtil;
 
 
@@ -22,18 +16,11 @@ public class Test {
 //			e.printStackTrace();
 //		}
 		
-		
-		
-		String url = "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=";
-		 url += "22354165-c0e0-40ab-8280-3fafe5da61a9";
-		 JSONObject json = new JSONObject();
-		 json.put("msgtype", "text");
-		 JSONObject contentJson = new JSONObject();
-		 contentJson.put("content", "学生端Android出新包了, 赶快去下载吧！\n下载地址：https://www.pgyer.com/xsd-android");
-		 json.put("text", contentJson);
-		 System.out.println(json.toString());
-		 String postResult = HttpUtil.doPost(url, json.toString());
-		 System.out.println(postResult);
+//		String postResult = SendMsgUtil.sendText("22354165-c0e0-40ab-8280-3fafe5da61a9", "学生端Android出新包了, 赶快去下载吧！\n\r下载地址：https://www.pgyer.com/xsd-android");
+		String postResult = SendMsgUtil.sendText("22354165-c0e0-40ab-8280-3fafe5da61a9"
+				, "学生端Android出新包了, 赶快去下载吧！\n\r下载地址：https://www.pgyer.com/xsd-android" 
+				, new String[]{"lilei3" , "@all"} );
+		System.out.println(postResult);
 	}
 	
 }

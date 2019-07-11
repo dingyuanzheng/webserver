@@ -10,12 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
-
-import com.alibaba.fastjson.JSONObject;
-
 import utils.CommentUtil;
-import utils.HttpUtil;
-import utils.MailUtils;
+import utils.SendMsgUtil;
 import utils.StringUtil;
 
 public class SendWXServlet extends HttpServlet {
@@ -23,6 +19,9 @@ public class SendWXServlet extends HttpServlet {
 	private String msgtype = "";
 	private String key = "";
 	private String content = "";
+	private String mentioned_list = "";
+	private String mentioned_mobile_list = "";
+	
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
@@ -50,6 +49,8 @@ public class SendWXServlet extends HttpServlet {
          		 out.close();
 				 return;
 			 }
+			 mentioned_list = "";
+			 msgtype = "";
 			 List<FileItem> list = upload.parseRequest(req);
 			 for(FileItem item : list) {
 				 if(item.isFormField()){
@@ -68,18 +69,20 @@ public class SendWXServlet extends HttpServlet {
 	                	  content = value;
 	                  }else if("msgtype".equals(name)) {
 	                	  msgtype = value;
+	                  }else if("mentioned_list".equals(name)) {
+	                	  mentioned_list = value;
 	                  }
 	             }
 	           }
-			 String url = "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=";
-			 url += key;
-			 JSONObject json = new JSONObject();
-			 json.put("msgtype", "text");
-			 JSONObject contentJson = new JSONObject();
-			 contentJson.put("content", content);
-			 json.put("text", contentJson);
-			 System.out.println(json.toString());
-			 String postResult = HttpUtil.doPost(url, json.toString());
+			 String postResult = ""; 
+			 if("text".equals(msgtype)) {
+				 if(StringUtil.isBlank(mentioned_list)) {
+					 postResult = SendMsgUtil.sendText(key, content);
+				 }else {
+					 final String[] mentioneds = mentioned_list.split(",");
+					 postResult = SendMsgUtil.sendText(key, content, mentioneds);
+				 }
+			 }
 			 System.out.println(postResult);
     		 out.append(CommentUtil.respSuccessTeacher(new Object() , "发送成功"));
 		}catch (Exception e) {
