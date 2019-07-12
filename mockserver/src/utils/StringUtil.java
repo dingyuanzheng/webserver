@@ -5,6 +5,7 @@ import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.Random;
 
+import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServlet;
 
 public class StringUtil {
@@ -65,7 +66,22 @@ public class StringUtil {
         File[] listFile = file.listFiles();
         return listFile;
     }
-
+    /**
+     * 获取webroot下面aixuexiapp/res下面的文件
+     *
+     * @return WebRoot目录的绝对路径
+     */
+    public static File[] getWebRootAiXueXiResAbsolutePath(ServletContext httpServlet, String group) {
+        String path = "";
+        if (StringUtil.isBlank(group)) {
+            path = httpServlet.getRealPath("/aixuexiapp/res/");
+        } else {
+            path = httpServlet.getRealPath("/aixuexiapp/res/") + File.separator + group;
+        }
+        File file = new File(path);
+        File[] listFile = file.listFiles();
+        return listFile;
+    }
     /**
      * 获取webroot下面aixuexiapp/apk下面的文件
      *

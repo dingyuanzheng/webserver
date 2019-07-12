@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -59,5 +60,34 @@ public class FileListHandleServlet extends HttpServlet {
 				}
 			}
 		}
+	}
+
+	/**
+	 * 查找文件
+	 * @param servlet
+	 * @param folder
+	 */
+	public static ArrayList<FileInfo> findFiles(ServletContext servlet, String folder,ArrayList<FileInfo> fileInfos) {
+
+		File[] files = StringUtil.getWebRootAiXueXiResAbsolutePath(servlet , folder);
+		if(files != null && files.length > 0) {
+			for(int i = 0 ; i < files.length ; i ++) {
+				if(files[i].exists()) {
+					if(files[i].isFile()) {
+						FileInfo fileInfo = new FileInfo();
+						fileInfo.setSize(files[i].length());
+						fileInfo.setUpdatedAt(files[i].lastModified());
+						fileInfo.setName(files[i].getName());
+						fileInfo.setGroup(folder + "");
+						fileInfos.add(fileInfo);
+					}else {
+						findFiles(servlet,files[i].getName(),fileInfos);
+					}
+				}else {
+					continue;
+				}
+			}
+		}
+		return fileInfos;
 	}
 }

@@ -1,5 +1,6 @@
 <%@ page language="java" import="java.util.*,upload.bean.FileInfo,utils.DateUtils" pageEncoding="utf-8"%>
 <%@ page import="utils.MathUtils" %>
+<%@ page import="upload.FileListHandleServlet" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -54,8 +55,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-  <% 
-  	List<FileInfo> fileList = (List<FileInfo>)session.getAttribute("fileList");
+  <%
+      ArrayList<FileInfo> fileInfos = new ArrayList<>();
+      List<FileInfo> fileList = FileListHandleServlet.findFiles(request.getServletContext(),"",fileInfos);
+//  	List<FileInfo> fileList = (List<FileInfo>)session.getAttribute("fileList");
   %>
   
   	<div id="container">

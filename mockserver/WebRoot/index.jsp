@@ -42,7 +42,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		</br>
 	  <div>
 		  <a href="${pageContext.request.contextPath}/upload.jsp" target="_Blank"><font size="4">上传文件</font></a>&nbsp&nbsp&nbsp&nbsp
-	      <a href="${pageContext.request.contextPath}/fileList" target="_Blank"><font size="4">资源列表</font></a>&nbsp&nbsp&nbsp&nbsp
+	      <a href="${pageContext.request.contextPath}/fileList.jsp" target="_Blank"><font size="4">资源列表</font></a>&nbsp&nbsp&nbsp&nbsp
 	      <a href="${pageContext.request.contextPath}/bejson.html" target="_Blank"><font size="4">json解析</font></a>&nbsp&nbsp&nbsp&nbsp
 	      <a href="http://jira.dev.aixuexi.com" target="_Blank"><font size="4">jira地址</font></a>&nbsp&nbsp&nbsp&nbsp
 	      <a href="http://iwork.gaosiedu.com" target="_Blank"><font size="4">iwork地址</font></a>&nbsp&nbsp&nbsp&nbsp
