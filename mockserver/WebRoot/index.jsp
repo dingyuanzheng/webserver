@@ -50,7 +50,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	      <a href="http://gitlab.ops.aixuexi.com" target="_Blank"><font size="4">GITLAB地址</font></a>&nbsp&nbsp&nbsp&nbsp
 	      <a href="https://tinypng.com/" target="_Blank"><font size="4">图片压缩地址</font></a>&nbsp&nbsp&nbsp&nbsp
 	      <a href="https://tool.lu/coderunner/" target="_Blank"><font size="4">在线代码运行</font></a>&nbsp&nbsp&nbsp&nbsp
-	      <a href="https://tool.lu/hexconvert/" target="_Blank"><font size="4">进制转换</font></a>
+	      <a href="https://tool.lu/hexconvert/" target="_Blank"><font size="4">进制转换</font></a></br>
+	      <a href="${pageContext.request.contextPath}/ios/index.html" target="_Blank"><font size="4">ios资源面板</font></a>&nbsp&nbsp&nbsp&nbsp
 	  </div>
       
   </body>
