@@ -103,7 +103,7 @@ public class StringUtil {
      * @return
      */
     public static String getIp() {
-		return "http://10.39.3.203:8080/mockserver";
+		return "http://10.39.3.239:8080/mockserver";
     }
 }
 

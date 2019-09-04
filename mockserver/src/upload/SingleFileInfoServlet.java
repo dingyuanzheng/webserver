@@ -49,7 +49,6 @@ public class SingleFileInfoServlet extends HttpServlet {
         out.append("<head>");
         out.append("<base href=" + StringUtil.getIp() + ">");
         out.append("<title>爱学习android客户端下载</title>");
-        out.append("<meta http-equiv='refresh' content='10'>");
         out.append("</head>");
         out.append("<body align='center'>");
         

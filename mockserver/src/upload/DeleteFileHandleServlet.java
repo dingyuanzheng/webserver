@@ -41,7 +41,7 @@ public class DeleteFileHandleServlet extends HttpServlet {
 		}else {
 			findAndDeleteFile(group , name);
 		}
-		resp.sendRedirect("./fileList");
+		resp.sendRedirect("./fileList.jsp");
 	}
 	
 	/**
