@@ -61,6 +61,7 @@ public class UploadHandleServlet extends HttpServlet {
 	                  
 	                  if(!StringUtil.isBlank(value)) {
 	                	//得到上传文件的保存目录，将上传的文件存放于/aixuexiapp/res目录下
+                          value = value.replaceAll("\r|\n", "");//app端上传会有/r/n?
 	             		 savePath = this.getServletContext().getRealPath("/aixuexiapp/res") + File.separator + value;
 	             		 File file = new File(savePath);
 	             		//判断上传文件的保存目录是否存在
