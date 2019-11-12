@@ -1,9 +1,8 @@
 package utils;
 
 import java.io.File;
-import java.net.InetAddress;
-import java.net.UnknownHostException;
-import java.util.Random;
+import java.net.*;
+import java.util.*;
 
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServlet;
@@ -66,6 +65,7 @@ public class StringUtil {
         File[] listFile = file.listFiles();
         return listFile;
     }
+
     /**
      * 获取webroot下面aixuexiapp/res下面的文件
      *
@@ -82,6 +82,7 @@ public class StringUtil {
         File[] listFile = file.listFiles();
         return listFile;
     }
+
     /**
      * 获取webroot下面aixuexiapp/apk下面的文件
      *
@@ -97,13 +98,65 @@ public class StringUtil {
         File file = new File(path);
         return file.list();
     }
-    
+
     /**
      * 获取ip地址
+     *
      * @return
      */
     public static String getIp() {
-		return "http://10.39.3.239:8080/mockserver";
+        InetAddress hostAddress = null;
+        try {
+            hostAddress = getLocalHostLANAddress();
+
+        } catch (UnknownHostException e) {
+            e.printStackTrace();
+
+        }
+        if (hostAddress != null) {
+            System.out.println("hostAddress" + hostAddress.getHostAddress());
+            return "http://" + hostAddress.getHostAddress() + ":8080/mockserver";
+        }
+        return "http://10.39.3.239:8080/mockserver";
+
+    }
+
+    // 正确的IP拿法，即优先拿site-local地址  https://www.jianshu.com/p/87b8ff9a466b
+    private static InetAddress getLocalHostLANAddress() throws UnknownHostException {
+        try {
+            InetAddress candidateAddress = null;
+            // 遍历所有的网络接口
+            for (Enumeration ifaces = NetworkInterface.getNetworkInterfaces(); ifaces.hasMoreElements(); ) {
+                NetworkInterface iface = (NetworkInterface) ifaces.nextElement();
+                // 在所有的接口下再遍历IP
+                for (Enumeration inetAddrs = iface.getInetAddresses(); inetAddrs.hasMoreElements(); ) {
+                    InetAddress inetAddr = (InetAddress) inetAddrs.nextElement();
+                    if (!inetAddr.isLoopbackAddress()) {// 排除loopback类型地址
+                        if (inetAddr.isSiteLocalAddress()) {
+                            // 如果是site-local地址，就是它了
+                            return inetAddr;
+                        } else if (candidateAddress == null) {
+                            // site-local类型的地址未被发现，先记录候选地址
+                            candidateAddress = inetAddr;
+                        }
+                    }
+                }
+            }
+            if (candidateAddress != null) {
+                return candidateAddress;
+            }
+            // 如果没有发现 non-loopback地址.只能用最次选的方案
+            InetAddress jdkSuppliedAddress = InetAddress.getLocalHost();
+            if (jdkSuppliedAddress == null) {
+                throw new UnknownHostException("The JDK InetAddress.getLocalHost() method unexpectedly returned null.");
+            }
+            return jdkSuppliedAddress;
+        } catch (Exception e) {
+            UnknownHostException unknownHostException = new UnknownHostException(
+                    "Failed to determine LAN address: " + e);
+            unknownHostException.initCause(e);
+            throw unknownHostException;
+        }
     }
 }
 
