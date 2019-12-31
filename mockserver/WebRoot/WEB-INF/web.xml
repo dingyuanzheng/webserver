@@ -8,14 +8,6 @@
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
     <servlet>
-        <servlet-name>ApkServlet</servlet-name>
-        <servlet-class>qcode.ApkServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>ApkServlet</servlet-name>
-        <url-pattern>/androidApp</url-pattern>
-    </servlet-mapping>
-    <servlet>
         <servlet-name>ApkQcodeServlet</servlet-name>
         <servlet-class>qcode.ApkQcodeServlet</servlet-class>
     </servlet>
@@ -59,14 +51,7 @@
         <servlet-name>SingleFileInfoServlet</servlet-name>
         <url-pattern>/fileDetail</url-pattern>
     </servlet-mapping>
-    <servlet>
-        <servlet-name>SendMailServlet1</servlet-name>
-        <servlet-class>upload.SendMailServlet1</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>SendMailServlet1</servlet-name>
-        <url-pattern>/sendMail1</url-pattern>
-    </servlet-mapping>
+    
     <servlet>
         <servlet-name>SendMailServlet</servlet-name>
         <servlet-class>upload.SendMailServlet2</servlet-class>
@@ -84,4 +69,25 @@
         <servlet-name>SendWXServlet</servlet-name>
         <url-pattern>/sendWxMsg</url-pattern>
     </servlet-mapping>
+    
+    
+    
+    <!-- gitlog -->
+    <servlet>
+        <servlet-name>CommitLogServlet</servlet-name>
+        <servlet-class>gitlog.CommitLogToServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CommitLogServlet</servlet-name>
+        <url-pattern>/commitlog</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>GetCommitLogFromServlet</servlet-name>
+        <servlet-class>gitlog.GetCommitLogFromServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetCommitLogFromServlet</servlet-name>
+        <url-pattern>/getcommitlog</url-pattern>
+    </servlet-mapping>
+    
 </web-app>

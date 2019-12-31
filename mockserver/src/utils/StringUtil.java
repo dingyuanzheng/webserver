@@ -108,10 +108,8 @@ public class StringUtil {
         InetAddress hostAddress = null;
         try {
             hostAddress = getLocalHostLANAddress();
-
         } catch (UnknownHostException e) {
             e.printStackTrace();
-
         }
         if (hostAddress != null) {
             System.out.println("hostAddress" + hostAddress.getHostAddress());

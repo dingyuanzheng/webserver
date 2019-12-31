@@ -1,4 +1,0 @@
-[
-    "dingyuanzheng@gaosiedu.com",
-    "huangshan0@gaosiedu.com"
-]

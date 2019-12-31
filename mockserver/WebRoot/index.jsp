@@ -38,11 +38,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				  </div>
 			  </tr>
 		</table>
-		
-		</br>
+	  </br>
 	  <div>
 		  <a href="${pageContext.request.contextPath}/upload.jsp" target="_Blank"><font size="4">上传文件</font></a>&nbsp&nbsp&nbsp&nbsp
 	      <a href="${pageContext.request.contextPath}/fileList.jsp" target="_Blank"><font size="4">资源列表</font></a>&nbsp&nbsp&nbsp&nbsp
+	      <a href="${pageContext.request.contextPath}/gitLogList.jsp" target="_Blank"><font size="4">查看git提交日志</font></a>&nbsp&nbsp&nbsp&nbsp
 	      <a href="${pageContext.request.contextPath}/bejson.html" target="_Blank"><font size="4">json解析</font></a>&nbsp&nbsp&nbsp&nbsp
 	      <a href="http://jira.dev.aixuexi.com" target="_Blank"><font size="4">jira地址</font></a>&nbsp&nbsp&nbsp&nbsp
 	      <a href="http://iwork.gaosiedu.com" target="_Blank"><font size="4">iwork地址</font></a>&nbsp&nbsp&nbsp&nbsp
@@ -53,6 +53,31 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	      <a href="https://tool.lu/hexconvert/" target="_Blank"><font size="4">进制转换</font></a></br>
 	      <a href="${pageContext.request.contextPath}/ios/index.html" target="_Blank"><font size="4">ios资源面板</font></a>&nbsp&nbsp&nbsp&nbsp
 	  </div>
+      
+      <div>
+      
+      	<h2>发送邮件</h2>
+      	<font>地址：http://10.39.3.239:8080/mockserver/sendMail</font></br>
+      	<font>参数：subject（标题，必填），emailMsg（消息，必填），email（消息接收人，必填，多个接收人用逗号隔开）</font></br>
+      	
+        <h2>发送企业邮件</h2>
+      	<font>地址：http://10.39.3.239:8080/mockserver/sendWxMsg</font></br>
+      	<font>参数：key（机器人key，必填），content（消息内容，必填），msgtype（消息类型，必填，支持text）</font></br>
+      	
+      	
+        <h2>文件上传</h2>
+      	<font>地址：http://10.39.3.239:8080/mockserver/uploadFile</font></br>
+      	<font>参数：username（组名，必填），file1（文件，必填）</font></br>
+      	
+      	<h2>文件查询</h2>
+      	<font>地址：http://10.39.3.8:8080/mockserver/getFiles?group=student</font></br>
+      	<font>参数：group（组名，必填）</font></br>
+      		
+      	<h2>git日志上传</h2>
+      	<font>地址：http://10.39.3.8:8080/mockserver/commitlog?project=项目&branch=分支&msg=提交日志</font></br>
+      	<font>参数：project（项目，必填），branch（分支，必填），msg（提交日志，必填）</font></br>
+      	
+      </div>
       
   </body>
 </html>

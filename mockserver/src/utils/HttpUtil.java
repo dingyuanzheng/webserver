@@ -118,7 +118,6 @@ public class HttpUtil {
             connection.setDoInput(true);
             // 设置传入参数的格式:请求参数应该是 name1=value1&name2=value2 的形式。
             connection.setRequestProperty("Content-Type", "application/json");
-            // 设置鉴权信息：Authorization: Bearer da3efcbf-0845-4fe3-8aba-ee040be542c0
             //connection.setRequestProperty("Authorization", "Bearer da3efcbf-0845-4fe3-8aba-ee040be542c0");
             // 通过连接对象获取一个输出流
             os = connection.getOutputStream();

@@ -14,7 +14,4 @@ public class RequestBean implements Serializable {
 		this.wallet_id = wallet_id;
 		this.account_number = account_number;
 	}
-	
-	
-	
 }
