@@ -105,16 +105,16 @@ public class StringUtil {
      * @return
      */
     public static String getIp() {
-        InetAddress hostAddress = null;
-        try {
-            hostAddress = getLocalHostLANAddress();
-        } catch (UnknownHostException e) {
-            e.printStackTrace();
-        }
-        if (hostAddress != null) {
-            System.out.println("hostAddress" + hostAddress.getHostAddress());
-            return "http://" + hostAddress.getHostAddress() + ":8080/mockserver";
-        }
+//        InetAddress hostAddress = null;
+//        try {
+//            hostAddress = getLocalHostLANAddress();
+//        } catch (UnknownHostException e) {
+//            e.printStackTrace();
+//        }
+//        if (hostAddress != null) {
+//            System.out.println("hostAddress" + hostAddress.getHostAddress());
+//            return "http://" + hostAddress.getHostAddress() + ":8080/mockserver";
+//        }
         return "http://10.39.3.239:8080/mockserver";
 
     }
