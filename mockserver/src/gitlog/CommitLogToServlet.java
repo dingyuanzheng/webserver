@@ -6,11 +6,19 @@ import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import org.apache.commons.fileupload.FileItem;
+import org.apache.commons.fileupload.FileUploadException;
+import org.apache.commons.fileupload.disk.DiskFileItemFactory;
+import org.apache.commons.fileupload.servlet.ServletFileUpload;
+
 import utils.CommentUtil;
 import utils.DateUtils;
 import utils.StringUtil;
@@ -30,12 +38,45 @@ public class CommitLogToServlet extends HttpServlet {
 		resp.setContentType("text/html");
 		resp.setHeader("Content-type", "text/json;charset=UTF-8");  
 		request.setCharacterEncoding("UTF-8");
-		
-		String project = new String(request.getParameter("project").getBytes("iso-8859-1"), "utf-8");
-		String branch = new String(request.getParameter("branch").getBytes("iso-8859-1"), "utf-8");
-		String msg = new String(request.getParameter("msg").getBytes("iso-8859-1"), "utf-8");
 		PrintWriter out = resp.getWriter();
-		
+		String project = "";
+		String branch = "";
+		String msg = "";
+		DiskFileItemFactory factory = new DiskFileItemFactory();
+		 ServletFileUpload upload = new ServletFileUpload(factory);
+		 upload.setHeaderEncoding("UTF-8"); 
+		 if(!ServletFileUpload.isMultipartContent(request)){
+			 out.append(CommentUtil.respErrorTeacher("参数异常"));
+      	     out.flush();
+    		 out.close();
+			 return;
+		 }
+		 List<FileItem> list;
+		try {
+			list = upload.parseRequest(request);
+			for(FileItem item : list) {
+				 if(item.isFormField()){
+	                 String name = item.getFieldName();
+	                 String value = item.getString("UTF-8");
+	                 System.out.println(name + "=" + value);
+	                 if(StringUtil.isBlank(name) || StringUtil.isBlank(value)) {
+	               	  out.append(CommentUtil.respErrorTeacher("参数异常"));
+	               	  out.flush();
+	             		  out.close();
+	               	  return;
+	                 }
+	                 if("project".equals(name)) {
+	                	 project = value;
+	                 }else if("branch".equals(name)) {
+	                	 branch = value;
+	                 }else if("msg".equals(name)) {
+	                	 msg = value;
+	                 }
+	            }
+	          }
+		} catch (FileUploadException e1) {
+			e1.printStackTrace();
+		}
 		System.out.println("project:" + project + "==branch==" + branch + "==msg==" + msg);
 		if(StringUtil.isBlank(project) || StringUtil.isBlank(branch) || StringUtil.isBlank(msg)) {
 			out.append(CommentUtil.respErrorTeacher("日志保存失败"));

@@ -70,11 +70,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       	<font>参数：username（组名，必填），file1（文件，必填）</font></br>
       	
       	<h2>文件查询</h2>
-      	<font>地址：http://10.39.3.8:8080/mockserver/getFiles?group=student</font></br>
+      	<font>地址：http://10.39.3.239:8080/mockserver/getFiles?group=student</font></br>
       	<font>参数：group（组名，必填）</font></br>
       		
       	<h2>git日志上传</h2>
-      	<font>地址：http://10.39.3.8:8080/mockserver/commitlog?project=项目&branch=分支&msg=提交日志</font></br>
+      	<font>地址：http://10.39.3.239:8080/mockserver/commitlog?project=项目&branch=分支&msg=提交日志</font></br>
       	<font>参数：project（项目，必填），branch（分支，必填），msg（提交日志，必填）</font></br>
       	
       </div>
