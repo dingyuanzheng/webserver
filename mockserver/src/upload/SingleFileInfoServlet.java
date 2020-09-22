@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.ParseException;
 import java.util.Date;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -14,7 +15,7 @@ import utils.StringUtil;
 
 public class SingleFileInfoServlet extends HttpServlet {
 	
-	private String baseUrl = StringUtil.getIp() + "/aixuexiapp/res/";
+	public static String baseUrl = StringUtil.getIp() + "/aixuexiapp/res/";
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
@@ -47,20 +48,9 @@ public class SingleFileInfoServlet extends HttpServlet {
         out.append("<title>爱学习android客户端下载</title>");
         out.append("</head>");
         out.append("<body align='center'>");
-        
-        String[] files = null;
-        if(StringUtil.isBlank(name) && StringUtil.isBlank(group)) {
-        	files = StringUtil.getWebRootAiXueXiResStrAbsolutePath(this , "");
-        }else if(!StringUtil.isBlank(name) && !StringUtil.isBlank(group)) {
-        	files = new String[1];
-        	files[0] = group + "/" + name;
-        }else if(!StringUtil.isBlank(name) && StringUtil.isBlank(group)) {
-        	files = new String[1];
-        	files[0] = name;
-        }else if(StringUtil.isBlank(name) && !StringUtil.isBlank(group)) {
-        	files = StringUtil.getWebRootAiXueXiResStrAbsolutePath(this , group);
-        }
-		
+
+		String[] files = getFileUrl(name, group,getServletContext());
+
 		if(files != null && files.length > 0) {
 			for(int i = 0 ; i < files.length ; i ++) {
 				System.out.println(files[i] + "文件名字");
@@ -81,6 +71,22 @@ public class SingleFileInfoServlet extends HttpServlet {
 		out.append("</body>");
 		out.flush();
         out.close();
+	}
+
+	public static String[] getFileUrl(String name, String group, ServletContext servlet) {
+		String[] files = null;
+		if(StringUtil.isBlank(name) && StringUtil.isBlank(group)) {
+			files = StringUtil.getWebRootAiXueXiResStrAbsolutePath(servlet , "");
+		}else if(!StringUtil.isBlank(name) && !StringUtil.isBlank(group)) {
+			files = new String[1];
+			files[0] = group + "/" + name;
+		}else if(!StringUtil.isBlank(name) && StringUtil.isBlank(group)) {
+			files = new String[1];
+			files[0] = name;
+		}else if(StringUtil.isBlank(name) && !StringUtil.isBlank(group)) {
+			files = StringUtil.getWebRootAiXueXiResStrAbsolutePath(servlet , group);
+		}
+		return files;
 	}
 
 }

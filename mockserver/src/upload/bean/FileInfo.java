@@ -9,6 +9,7 @@ public class FileInfo implements Serializable{
 	private String name;
 	private long updatedAt;
 	private String group;
+	private String version;
 
 	
 	
@@ -16,7 +17,12 @@ public class FileInfo implements Serializable{
 		return group;
 	}
 
-
+	public String getVersion() {
+		return version;
+	}
+	public void setVersion(String version) {
+		this.version = version;
+	}
 	public void setGroup(String group) {
 		this.group = group;
 	}

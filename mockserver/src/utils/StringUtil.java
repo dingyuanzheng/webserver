@@ -89,16 +89,23 @@ public class StringUtil {
      * @return WebRoot目录的绝对路径
      */
     public static String[] getWebRootAiXueXiResStrAbsolutePath(HttpServlet httpServlet, String group) {
+        return getWebRootAiXueXiResStrAbsolutePath(httpServlet.getServletContext(),group);
+    }
+    /**
+     * 获取webroot下面aixuexiapp/apk下面的文件
+     *
+     * @return WebRoot目录的绝对路径
+     */
+    public static String[] getWebRootAiXueXiResStrAbsolutePath(ServletContext httpServlet, String group) {
         String path = "";
         if (StringUtil.isBlank(group)) {
-            path = httpServlet.getServletContext().getRealPath("/aixuexiapp/res");
+            path = httpServlet.getRealPath("/aixuexiapp/res");
         } else {
-            path = httpServlet.getServletContext().getRealPath("/aixuexiapp/res") + File.separator + group;
+            path = httpServlet.getRealPath("/aixuexiapp/res") + File.separator + group;
         }
         File file = new File(path);
         return file.list();
     }
-
     /**
      * 获取ip地址
      *
@@ -115,7 +122,7 @@ public class StringUtil {
 //            System.out.println("hostAddress" + hostAddress.getHostAddress());
 //            return "http://" + hostAddress.getHostAddress() + ":8080/mockserver";
 //        }
-        return "http://192.168.0.228:8080/mockserver";
+        return "http://localhost:8080/mockserver";
 
     }
 

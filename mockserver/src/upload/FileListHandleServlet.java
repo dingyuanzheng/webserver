@@ -1,8 +1,11 @@
 package upload;
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipFile;
+import java.util.zip.ZipInputStream;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -46,12 +49,7 @@ public class FileListHandleServlet extends HttpServlet {
 			for(int i = 0 ; i < files.length ; i ++) {
 				if(files[i].exists()) {
 					if(files[i].isFile()) {
-						FileInfo fileInfo = new FileInfo();
-						fileInfo.setSize(files[i].length());
-						fileInfo.setUpdatedAt(files[i].lastModified());
-						fileInfo.setName(files[i].getName());
-						fileInfo.setGroup(folder + "");
-						fileInfos.add(fileInfo);
+						makeFileList(folder, fileInfos, files[i],this.getServletContext());
 					}else {
 						findFile(files[i].getName());
 					}
@@ -59,6 +57,36 @@ public class FileListHandleServlet extends HttpServlet {
 					continue;
 				}
 			}
+		}
+	}
+
+	private static void setFileVerison(File file, FileInfo fileInfo) {
+		try {
+			String path = file.getPath();
+			ZipFile zf = new ZipFile(path);
+			InputStream in = null;
+			in = new BufferedInputStream(new FileInputStream(path));
+			Charset gbk = Charset.forName("gbk");
+			ZipInputStream zin = new ZipInputStream(in,gbk);
+			ZipEntry ze;
+			while((ze = zin.getNextEntry()) != null){
+				if(ze.toString().endsWith("json")){
+					BufferedReader br = new BufferedReader(
+							new InputStreamReader(zf.getInputStream(ze)));
+					String line;
+					while((line = br.readLine()) != null){
+						fileInfo.setVersion(line);
+						System.out.println(line.toString());
+					}
+					br.close();
+				}
+				System.out.println("=====");
+			}
+			zin.closeEntry();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
 	}
 
@@ -74,12 +102,7 @@ public class FileListHandleServlet extends HttpServlet {
 			for(int i = 0 ; i < files.length ; i ++) {
 				if(files[i].exists()) {
 					if(files[i].isFile()) {
-						FileInfo fileInfo = new FileInfo();
-						fileInfo.setSize(files[i].length());
-						fileInfo.setUpdatedAt(files[i].lastModified());
-						fileInfo.setName(files[i].getName());
-						fileInfo.setGroup(folder + "");
-						fileInfos.add(fileInfo);
+						makeFileList(folder, fileInfos, files[i],servlet);
 					}else {
 						findFiles(servlet,files[i].getName(),fileInfos);
 					}
@@ -89,5 +112,21 @@ public class FileListHandleServlet extends HttpServlet {
 			}
 		}
 		return fileInfos;
+	}
+
+	private static void makeFileList(String folder, ArrayList<FileInfo> fileInfos, File file,ServletContext servlet) {
+		FileInfo fileInfo = new FileInfo();
+		fileInfo.setSize(file.length());
+		fileInfo.setUpdatedAt(file.lastModified());
+		fileInfo.setName(file.getName());
+		fileInfo.setGroup(folder + "");
+		try {
+			String [] files = SingleFileInfoServlet.getFileUrl(file.getName() , folder + "",servlet);
+			fileInfo.setUrl(SingleFileInfoServlet.baseUrl+files[0]);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		setFileVerison(file, fileInfo);
+		fileInfos.add(fileInfo);
 	}
 }
