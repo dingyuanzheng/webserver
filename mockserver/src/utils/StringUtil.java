@@ -122,7 +122,7 @@ public class StringUtil {
 //            System.out.println("hostAddress" + hostAddress.getHostAddress());
 //            return "http://" + hostAddress.getHostAddress() + ":8080/mockserver";
 //        }
-        return "http://localhost:8080/mockserver";
+        return "http://192.168.0.228:8080/mockserver";
 
     }
 

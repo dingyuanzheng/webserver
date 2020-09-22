@@ -66,6 +66,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	        <tr class="mockItem">
 	            <td class="name">    文件名    </td>
 	            <td class="group">    组名    </td>
+				<td class="version">    版本    </td>
 	            <td class="time">    创建时间     </td>
 	            <td class="size">    文件大小    </td>
 	            <td class="opert">    操  作    </td>
@@ -77,12 +78,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
        			<tr class="mockItem">
 				     <td class="name"><%=fileList.get(i).getName()%></td>
 				     <td class="group"><%=fileList.get(i).getGroup()%></td>
+				     <td class="version"><%=fileList.get(i).getVersion()%></td>
 				     <td class="time"><%=DateUtils.dateFormat(new Date(fileList.get(i).getUpdatedAt()), DateUtils.DATE_TIME_PATTERN)%>  </td>
 
 				     <td class="size"><%=MathUtils.getScaleNumber(fileList.get(i).getSize(),1024*1024)%> MB</td>
 				     <td class="opert">
 					     <a href="${pageContext.request.contextPath}<%="/fileDetail?name=" + fileList.get(i).getName() + "&group=" + fileList.get(i).getGroup()+ "&size=" + fileList.get(i).getSize()+ "&updateAt=" + fileList.get(i).getUpdatedAt()%>">查看详情</a>
 					     <a href="${pageContext.request.contextPath}<%="/deleteFile?name=" + fileList.get(i).getName() + "&group=" + fileList.get(i).getGroup()%>">删除</a>
+					     <a href="<%=fileList.get(i).getUrl()%>">下载</a>
 					 </td>
 				</tr>
 			<%
