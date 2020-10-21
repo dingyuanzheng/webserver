@@ -70,7 +70,7 @@ public class FileListHandleServlet extends HttpServlet {
 			ZipInputStream zin = new ZipInputStream(in,gbk);
 			ZipEntry ze;
 			while((ze = zin.getNextEntry()) != null){
-				if(ze.toString().endsWith("json")){
+				if(ze.toString().endsWith("version.json")){
 					BufferedReader br = new BufferedReader(
 							new InputStreamReader(zf.getInputStream(ze)));
 					String line;
@@ -126,7 +126,9 @@ public class FileListHandleServlet extends HttpServlet {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		setFileVerison(file, fileInfo);
+		if (file.getName().contains(".zip")){//zip包才查看是否有版本信息
+			setFileVerison(file, fileInfo);
+		}
 		fileInfos.add(fileInfo);
 	}
 }
