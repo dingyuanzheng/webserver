@@ -55,10 +55,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-  <%
+  <%  long beginTime = System.currentTimeMillis();
+	  FileListHandleServlet.currentKeySet.clear();
       ArrayList<FileInfo> fileInfos = new ArrayList<FileInfo>();
       List<FileInfo> fileList = FileListHandleServlet.findFiles(request.getServletContext(),"",fileInfos);
 //  	List<FileInfo> fileList = (List<FileInfo>)session.getAttribute("fileList");
+	  FileListHandleServlet.removeRedundantCache();
+	  long endTime = System.currentTimeMillis()-beginTime;
+	  FileListHandleServlet.pageViewCount++;
+	  System.out.println("FileListHandleServlet+pageViewCount="+FileListHandleServlet.pageViewCount+"duration="+endTime);
+	  System.out.println("FileListHandleServlet+currentKeySet.Size="+FileListHandleServlet.currentKeySet.size()+"fileVersionCache.size="+FileListHandleServlet.fileVersionCache.size());
   %>
   
   	<div id="container">
