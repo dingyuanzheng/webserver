@@ -91,6 +91,9 @@ public class FileListHandleServlet extends HttpServlet {
                     br.close();
                 }
             }
+            if (!fileVersionCache.containsKey(key)) {
+                fileVersionCache.put(key, "no version info");
+            }
             zin.closeEntry();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -153,6 +156,7 @@ public class FileListHandleServlet extends HttpServlet {
             if (file.getName().contains(".zip") && !fileVersionCache.containsKey(cacheKey)) {//zip包才查看是否有版本信息
                 setFileVerison(file, fileInfo, cacheKey);
                 System.out.println(cacheKey + "was added!");
+
             } else {
                 fileInfo.setVersion(fileVersionCache.get(cacheKey));
 //                cacheHitCount++;
